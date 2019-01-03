@@ -5,6 +5,7 @@ PODS:
   - BoringSSL/Implementation (10.0.6):
     - BoringSSL/Interface (= 10.0.6)
   - BoringSSL/Interface (10.0.6)
+  - CenteredCollectionView (2.0.0)
   - Firebase/Core (5.12.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.3.0)
@@ -106,14 +107,18 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - Sparrow/LaunchAnimation (1.1.1)
 
 DEPENDENCIES:
+  - CenteredCollectionView
   - Firebase/Core
   - Firebase/Firestore
+  - Sparrow/LaunchAnimation (from `https://github.com/IvanVorobei/Sparrow.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BoringSSL
+    - CenteredCollectionView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -131,8 +136,18 @@ SPEC REPOS:
     - nanopb
     - Protobuf
 
+EXTERNAL SOURCES:
+  Sparrow:
+    :git: https://github.com/IvanVorobei/Sparrow.git
+
+CHECKOUT OPTIONS:
+  Sparrow:
+    :commit: 9c020f2e26e2239e61a1213419723965b05d011e
+    :git: https://github.com/IvanVorobei/Sparrow.git
+
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  CenteredCollectionView: 6548b515645aea6ea89618f4b5ca090191dc8628
   Firebase: 9190018e296139d938b99521cde0c15a6e8d2946
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -149,7 +164,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  Sparrow: f17e8d8dd578b2deb1d96a4a64952819d2b42121
 
-PODFILE CHECKSUM: 21c64fb83e78ad3a54c57f970c7b91aa3c1174fb
+PODFILE CHECKSUM: d0284d80dddf8d0165c5538069a9fc61ab30acff
 
 COCOAPODS: 1.6.0.beta.2

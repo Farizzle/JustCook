@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6407C74721DE936900845D59 /* grocery (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 6407C74621DE936900845D59 /* grocery (2).png */; };
+		6407C74B21DE94A200845D59 /* OFL-FAQ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6407C74821DE94A100845D59 /* OFL-FAQ.txt */; };
+		6407C74C21DE94A200845D59 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6407C74921DE94A200845D59 /* OFL.txt */; };
+		6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6407C74A21DE94A200845D59 /* AdmiralCAT.ttf */; };
+		6460935321DEA07D00A2F17B /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460935221DEA07D00A2F17B /* Slide.swift */; };
+		6460935521DEA09400A2F17B /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6460935421DEA09400A2F17B /* Slide.xib */; };
 		649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DABD621DE81DE004A9485 /* AppDelegate.swift */; };
 		649DABD921DE81DE004A9485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DABD821DE81DE004A9485 /* ViewController.swift */; };
 		649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDA21DE81DE004A9485 /* Main.storyboard */; };
 		649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDD21DE81E0004A9485 /* Assets.xcassets */; };
 		649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */; };
+		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
 		839873259D4C4E4E2AB31990 /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60CAA51C4B791335C3B59EA4 /* Pods-JustCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.release.xcconfig"; path = "Target Support Files/Pods-JustCook/Pods-JustCook.release.xcconfig"; sourceTree = "<group>"; };
+		6407C74621DE936900845D59 /* grocery (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grocery (2).png"; sourceTree = "<group>"; };
+		6407C74821DE94A100845D59 /* OFL-FAQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-FAQ.txt"; sourceTree = "<group>"; };
+		6407C74921DE94A200845D59 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		6407C74A21DE94A200845D59 /* AdmiralCAT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdmiralCAT.ttf; sourceTree = "<group>"; };
+		6460935221DEA07D00A2F17B /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		6460935421DEA09400A2F17B /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		649DABD321DE81DE004A9485 /* JustCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DABD621DE81DE004A9485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649DABD821DE81DE004A9485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +38,7 @@
 		649DABDD21DE81E0004A9485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649DABE021DE81E0004A9485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		649DABE221DE81E0004A9485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.debug.xcconfig"; path = "Target Support Files/Pods-JustCook/Pods-JustCook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,12 +75,19 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
+				649DABE821DE8534004A9485 /* GoogleService-Info.plist */,
 				649DABD621DE81DE004A9485 /* AppDelegate.swift */,
 				649DABD821DE81DE004A9485 /* ViewController.swift */,
 				649DABDA21DE81DE004A9485 /* Main.storyboard */,
 				649DABDD21DE81E0004A9485 /* Assets.xcassets */,
 				649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */,
+				6407C74621DE936900845D59 /* grocery (2).png */,
 				649DABE221DE81E0004A9485 /* Info.plist */,
+				6407C74A21DE94A200845D59 /* AdmiralCAT.ttf */,
+				6407C74821DE94A100845D59 /* OFL-FAQ.txt */,
+				6407C74921DE94A200845D59 /* OFL.txt */,
+				6460935221DEA07D00A2F17B /* Slide.swift */,
+				6460935421DEA09400A2F17B /* Slide.xib */,
 			);
 			path = JustCook;
 			sourceTree = "<group>";
@@ -77,7 +98,6 @@
 				A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */,
 				60CAA51C4B791335C3B59EA4 /* Pods-JustCook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,9 +169,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6407C74C21DE94A200845D59 /* OFL.txt in Resources */,
+				6407C74721DE936900845D59 /* grocery (2).png in Resources */,
 				649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */,
+				649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */,
+				6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */,
 				649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */,
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
+				6407C74B21DE94A200845D59 /* OFL-FAQ.txt in Resources */,
+				6460935521DEA09400A2F17B /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +194,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JustCook/Pods-JustCook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Sparrow/Sparrow.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -183,8 +211,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenteredCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparrow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -227,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
 				649DABD921DE81DE004A9485 /* ViewController.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 			);
@@ -382,7 +413,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fariszaman.JustCook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fariszaman.JustCook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

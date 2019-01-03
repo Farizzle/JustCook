@@ -9,6 +9,7 @@ target 'JustCook' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-
+pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
+pod 'CenteredCollectionView'
 
 end
