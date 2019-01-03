@@ -1,0 +1,6 @@
+framework module Pods_JustCook {
+  umbrella header "Pods-JustCook-umbrella.h"
+
+  export *
+  module * { export * }
+}
