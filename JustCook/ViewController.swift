@@ -34,30 +34,30 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [Slide] {
         
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.imageView.image = UIImage(named: "ic_onboarding_1")
-        slide1.labelTitle.text = "A real-life bear"
-        slide1.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide1.imageView.image = UIImage(named: "recipes")
+        slide1.labelTitle.text = "Pick your recipe"
+        slide1.labelDesc.text = "From everyday classics which you're familiar with, to brand spanking new recipes from across the globe!"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.imageView.image = UIImage(named: "ic_onboarding_2")
-        slide2.labelTitle.text = "A real-life bear"
-        slide2.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide2.imageView.image = UIImage(named: "planahead")
+        slide2.labelTitle.text = "Plan in advance"
+        slide2.labelDesc.text = "It really helpful and time saving to plan your meals for the coming days"
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.imageView.image = UIImage(named: "ic_onboarding_3")
-        slide3.labelTitle.text = "A real-life bear"
-        slide3.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide3.imageView.image = UIImage(named: "savings")
+        slide3.labelTitle.text = "Get the best deals"
+        slide3.labelDesc.text = "Get the best prices for all the right ingredients to make your planned meals both cost effective and delicious!"
         
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide4.imageView.image = UIImage(named: "ic_onboarding_4")
-        slide4.labelTitle.text = "A real-life bear"
-        slide4.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide4.imageView.image = UIImage(named: "delivery")
+        slide4.labelTitle.text = "Order with a click"
+        slide4.labelDesc.text = "Once you've got all your recipes and ingredients sorted - order them straight to your door!"
         
         
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide5.imageView.image = UIImage(named: "ic_onboarding_5")
-        slide5.labelTitle.text = "A real-life bear"
-        slide5.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide5.imageView.image = UIImage(named: "fridge")
+        slide5.labelTitle.text = "Just Fridge"
+        slide5.labelDesc.text = "The Just Fridge updates with live time in order to let you know what ingredients you have remaining - notifying you if you're running short on essentials!"
         
         return [slide1, slide2, slide3, slide4, slide5]
     }
