@@ -14,7 +14,7 @@
 		6460935321DEA07D00A2F17B /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460935221DEA07D00A2F17B /* Slide.swift */; };
 		6460935521DEA09400A2F17B /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6460935421DEA09400A2F17B /* Slide.xib */; };
 		649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DABD621DE81DE004A9485 /* AppDelegate.swift */; };
-		649DABD921DE81DE004A9485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DABD821DE81DE004A9485 /* ViewController.swift */; };
+		649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DABD821DE81DE004A9485 /* SplashViewController.swift */; };
 		649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDA21DE81DE004A9485 /* Main.storyboard */; };
 		649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDD21DE81E0004A9485 /* Assets.xcassets */; };
 		649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		6460935421DEA09400A2F17B /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		649DABD321DE81DE004A9485 /* JustCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649DABD621DE81DE004A9485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		649DABD821DE81DE004A9485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		649DABD821DE81DE004A9485 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		649DABDB21DE81DE004A9485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		649DABDD21DE81E0004A9485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		649DABE021DE81E0004A9485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,19 +75,10 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
-				649DABE821DE8534004A9485 /* GoogleService-Info.plist */,
-				649DABD621DE81DE004A9485 /* AppDelegate.swift */,
-				649DABD821DE81DE004A9485 /* ViewController.swift */,
-				649DABDA21DE81DE004A9485 /* Main.storyboard */,
-				649DABDD21DE81E0004A9485 /* Assets.xcassets */,
-				649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */,
-				6407C74621DE936900845D59 /* grocery (2).png */,
-				649DABE221DE81E0004A9485 /* Info.plist */,
-				6407C74A21DE94A200845D59 /* AdmiralCAT.ttf */,
-				6407C74821DE94A100845D59 /* OFL-FAQ.txt */,
-				6407C74921DE94A200845D59 /* OFL.txt */,
-				6460935221DEA07D00A2F17B /* Slide.swift */,
-				6460935421DEA09400A2F17B /* Slide.xib */,
+				EFA6B42221E53A99007922C6 /* Core */,
+				EFA6B42121E53A7C007922C6 /* UserInterface */,
+				EFA6B41D21E53A58007922C6 /* Additionals */,
+				EFA6B41C21E53A4C007922C6 /* ViewControllers */,
 			);
 			path = JustCook;
 			sourceTree = "<group>";
@@ -107,6 +98,71 @@
 				4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFA6B41C21E53A4C007922C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				649DABD821DE81DE004A9485 /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFA6B41D21E53A58007922C6 /* Additionals */ = {
+			isa = PBXGroup;
+			children = (
+				EFA6B41E21E53A66007922C6 /* Resources */,
+				649DABE821DE8534004A9485 /* GoogleService-Info.plist */,
+			);
+			path = Additionals;
+			sourceTree = "<group>";
+		};
+		EFA6B41E21E53A66007922C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFA6B42021E53A6E007922C6 /* Fonts */,
+				EFA6B41F21E53A6A007922C6 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EFA6B41F21E53A6A007922C6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				649DABDD21DE81E0004A9485 /* Assets.xcassets */,
+				6407C74621DE936900845D59 /* grocery (2).png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EFA6B42021E53A6E007922C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6407C74821DE94A100845D59 /* OFL-FAQ.txt */,
+				6407C74A21DE94A200845D59 /* AdmiralCAT.ttf */,
+				6407C74921DE94A200845D59 /* OFL.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EFA6B42121E53A7C007922C6 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6460935221DEA07D00A2F17B /* Slide.swift */,
+				6460935421DEA09400A2F17B /* Slide.xib */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		EFA6B42221E53A99007922C6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				649DABD621DE81DE004A9485 /* AppDelegate.swift */,
+				649DABDA21DE81DE004A9485 /* Main.storyboard */,
+				649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */,
+				649DABE221DE81E0004A9485 /* Info.plist */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
-				649DABD921DE81DE004A9485 /* ViewController.swift in Sources */,
+				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         
         SPLaunchAnimation.asTwitter(onWindow: self.window!)
-        
+    
         return true
     }
 
