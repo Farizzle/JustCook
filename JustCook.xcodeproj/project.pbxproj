@@ -20,6 +20,10 @@
 		649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */; };
 		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
 		839873259D4C4E4E2AB31990 /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */; };
+		EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */; };
+		EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42621E5442C007922C6 /* UIHelper.swift */; };
+		EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42921E545B4007922C6 /* Colours.swift */; };
+		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		649DABE221DE81E0004A9485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.debug.xcconfig"; path = "Target Support Files/Pods-JustCook/Pods-JustCook.debug.xcconfig"; sourceTree = "<group>"; };
+		EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
+		EFA6B42621E5442C007922C6 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		EFA6B42921E545B4007922C6 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,8 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
+				EFA6B42821E545A9007922C6 /* Constants */,
+				EFA6B42521E5441C007922C6 /* Helpers */,
 				EFA6B42221E53A99007922C6 /* Core */,
 				EFA6B42121E53A7C007922C6 /* UserInterface */,
 				EFA6B41D21E53A58007922C6 /* Additionals */,
@@ -104,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				649DABD821DE81DE004A9485 /* SplashViewController.swift */,
+				EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +174,23 @@
 				649DABE221DE81E0004A9485 /* Info.plist */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		EFA6B42521E5441C007922C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFA6B42621E5442C007922C6 /* UIHelper.swift */,
+				EFEC13C021E690080048D11C /* CustomButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EFA6B42821E545A9007922C6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EFA6B42921E545B4007922C6 /* Colours.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
+				EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */,
 				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
+				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
+				EFEC13C121E690080048D11C /* CustomButton.swift in Sources */,
+				EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P27A23S3XE;
-				INFOPLIST_FILE = JustCook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JustCook/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P27A23S3XE;
-				INFOPLIST_FILE = JustCook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JustCook/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

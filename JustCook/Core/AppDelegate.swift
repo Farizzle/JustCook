@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         
         SPLaunchAnimation.asTwitter(onWindow: self.window!)
-    
+        UINavigationBar.appearance().barTintColor = UIColor(red: 1/255, green: 174/255, blue: 240/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
         return true
     }
 
@@ -50,4 +53,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

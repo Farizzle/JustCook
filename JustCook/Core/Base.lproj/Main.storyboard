@@ -10,39 +10,326 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Splash View Controller-->
+        <!--User Preferences View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="navigationController" id="BYZ-38-t0r" customClass="SplashViewController" customModule="JustCook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="navigationController" id="BYZ-38-t0r" customClass="UserPreferencesViewController" customModule="JustCook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0YX-Ue-1WY">
-                                <rect key="frame" x="168" y="795" width="78" height="37"/>
-                            </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5R-KN-Ubd">
-                                <rect key="frame" x="-6" y="-5" width="420" height="901"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For how many people are you serving?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74D-XL-UcS">
+                                <rect key="frame" x="20" y="100" width="374" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your usual budget for groceries?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6t-cG-RKS">
+                                <rect key="frame" x="20" y="216" width="374" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="zA0-G0-JeQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5P-82-a7S">
+                                <rect key="frame" x="176" y="148" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-9U-eVo">
+                                <rect key="frame" x="56" y="148" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="decreaseServing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2w-OT-2SC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-Vc-fZF">
+                                <rect key="frame" x="296" y="148" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="increaseServing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhS-QL-Opa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AV-Ng-pPL" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="56" y="278" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tfm-bU-eyg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="£">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleBudgetButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xd-q2-2jV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKA-5r-Qxt" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="176" y="278" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GBS-D4-4Ym"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="££">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleBudgetButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMp-nm-CEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-Me-7Ad" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="296" y="278" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wPv-XM-FfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="£££">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleBudgetButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJK-Fd-rVr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For which days are you planning on meal prepping?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-C7-d0C">
+                                <rect key="frame" x="20" y="346" width="373" height="54"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTe-Zo-QhF" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="103" y="408" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ONq-wK-ETn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Monday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIp-5Z-Kxx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-Ux-jKg" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="103" y="504" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rn1-Yb-gkZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Wednesday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5b8-ou-1ce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-Q8-1QX" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="102" y="552" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ItB-ZS-MwV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Thursday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sdc-97-rxa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zj-a2-kz3" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="102" y="600" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ITl-Pl-jDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Friday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgG-1X-2gk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-fL-UX7" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="102" y="648" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EAw-Go-eK2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Saturday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CcH-y7-jLN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-ID-gKe" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="103" y="696" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aDr-2h-Z6l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sunday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vp3-ON-Pfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-cX-gMO" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                                <rect key="frame" x="102" y="456" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dt4-Ty-vh2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Tuesday">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VV0-pa-BqB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0YX-Ue-1WY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="HEk-xr-BnD"/>
-                            <constraint firstItem="a5R-KN-Ubd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-7.5" id="JR5-SH-Emy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0YX-Ue-1WY" secondAttribute="bottom" constant="30" id="ND0-6N-80r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0YX-Ue-1WY" secondAttribute="trailing" constant="168" id="Rma-pq-Csa"/>
-                            <constraint firstItem="a5R-KN-Ubd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-3" id="SGF-lc-6wW"/>
-                            <constraint firstItem="0YX-Ue-1WY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WfM-cz-14Q"/>
-                            <constraint firstItem="a5R-KN-Ubd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="5" id="XdE-2P-PwB"/>
-                            <constraint firstItem="a5R-KN-Ubd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="6" id="hVK-Eq-ILQ"/>
+                            <constraint firstItem="aTe-Zo-QhF" firstAttribute="trailing" secondItem="8UH-Ux-jKg" secondAttribute="trailing" id="0VX-DK-Ozp"/>
+                            <constraint firstItem="2eq-fL-UX7" firstAttribute="top" secondItem="2zj-a2-kz3" secondAttribute="bottom" constant="8" symbolic="YES" id="1Z5-mf-u4R"/>
+                            <constraint firstItem="bgF-Me-7Ad" firstAttribute="leading" secondItem="8wL-cX-gMO" secondAttribute="leading" constant="194" id="1up-eb-Ryk"/>
+                            <constraint firstItem="Z6t-cG-RKS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4c8-R9-yma"/>
+                            <constraint firstItem="aTe-Zo-QhF" firstAttribute="leading" secondItem="8UH-Ux-jKg" secondAttribute="leading" id="4nv-Rr-Dp8"/>
+                            <constraint firstItem="Mya-9U-eVo" firstAttribute="top" secondItem="74D-XL-UcS" secondAttribute="bottom" constant="8" id="5YT-iA-dm0"/>
+                            <constraint firstItem="HFU-C7-d0C" firstAttribute="top" secondItem="bgF-Me-7Ad" secondAttribute="bottom" constant="8" symbolic="YES" id="5g1-hh-ym0"/>
+                            <constraint firstItem="2zj-a2-kz3" firstAttribute="leading" secondItem="2eq-fL-UX7" secondAttribute="leading" id="646-6f-jUo"/>
+                            <constraint firstItem="SYo-Q8-1QX" firstAttribute="leading" secondItem="2zj-a2-kz3" secondAttribute="leading" id="6nJ-2N-cdq"/>
+                            <constraint firstItem="8UH-Ux-jKg" firstAttribute="top" secondItem="8wL-cX-gMO" secondAttribute="bottom" constant="8" symbolic="YES" id="99K-Vc-OgQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74D-XL-UcS" secondAttribute="trailing" constant="20" id="CxN-hD-eOk"/>
+                            <constraint firstItem="74D-XL-UcS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hi0-KA-qkw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mya-9U-eVo" secondAttribute="bottom" constant="654" id="IlR-vv-30P"/>
+                            <constraint firstItem="XKA-5r-Qxt" firstAttribute="leading" secondItem="bgF-Me-7Ad" secondAttribute="leading" constant="-120" id="Iwu-Kd-CN2"/>
+                            <constraint firstItem="2AV-Ng-pPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="Lhe-XQ-0ei"/>
+                            <constraint firstItem="X6i-Vc-fZF" firstAttribute="leading" secondItem="l5P-82-a7S" secondAttribute="trailing" constant="60" id="Lir-nA-PxC"/>
+                            <constraint firstItem="fRP-ID-gKe" firstAttribute="top" secondItem="2eq-fL-UX7" secondAttribute="bottom" constant="8" symbolic="YES" id="Lr2-Eb-8C7"/>
+                            <constraint firstItem="2AV-Ng-pPL" firstAttribute="leading" secondItem="XKA-5r-Qxt" secondAttribute="leading" constant="-120" id="MWM-QR-c2y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l5P-82-a7S" secondAttribute="trailing" constant="178" id="Msx-S8-DUz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="74D-XL-UcS" secondAttribute="bottom" constant="722" id="NVT-m4-1oP"/>
+                            <constraint firstItem="bgF-Me-7Ad" firstAttribute="centerX" secondItem="HFU-C7-d0C" secondAttribute="centerX" constant="119.5" id="Q3S-WN-vxJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X6i-Vc-fZF" secondAttribute="bottom" constant="654" id="TqB-SG-cmG"/>
+                            <constraint firstItem="SYo-Q8-1QX" firstAttribute="top" secondItem="8UH-Ux-jKg" secondAttribute="bottom" constant="8" symbolic="YES" id="UBF-fW-BEc"/>
+                            <constraint firstItem="2zj-a2-kz3" firstAttribute="trailing" secondItem="2eq-fL-UX7" secondAttribute="trailing" id="WGo-Ha-Drp"/>
+                            <constraint firstItem="aTe-Zo-QhF" firstAttribute="top" secondItem="HFU-C7-d0C" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpt-mc-aFm"/>
+                            <constraint firstItem="Mya-9U-eVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="YDE-cq-me7"/>
+                            <constraint firstItem="XKA-5r-Qxt" firstAttribute="top" secondItem="2AV-Ng-pPL" secondAttribute="bottom" constant="-60" id="YZ9-wD-sJW"/>
+                            <constraint firstItem="8wL-cX-gMO" firstAttribute="top" secondItem="aTe-Zo-QhF" secondAttribute="bottom" constant="8" symbolic="YES" id="ZJC-T3-ERF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fRP-ID-gKe" secondAttribute="bottom" constant="126" id="aCz-Pd-O2s"/>
+                            <constraint firstItem="l5P-82-a7S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="bXA-TH-9sL"/>
+                            <constraint firstItem="2AV-Ng-pPL" firstAttribute="trailing" secondItem="XKA-5r-Qxt" secondAttribute="trailing" constant="-120" id="bm6-IJ-6GV"/>
+                            <constraint firstItem="Z6t-cG-RKS" firstAttribute="centerX" secondItem="aTe-Zo-QhF" secondAttribute="centerX" id="dh4-Hw-Uxl"/>
+                            <constraint firstItem="8UH-Ux-jKg" firstAttribute="leading" secondItem="fRP-ID-gKe" secondAttribute="leading" id="fct-kf-WHX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l5P-82-a7S" secondAttribute="bottom" constant="654" id="glf-0p-K5M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X6i-Vc-fZF" secondAttribute="trailing" constant="58" id="gx5-K7-MsC"/>
+                            <constraint firstItem="Z6t-cG-RKS" firstAttribute="leading" secondItem="HFU-C7-d0C" secondAttribute="leading" id="hD2-RM-CFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6t-cG-RKS" secondAttribute="trailing" constant="20" id="j2g-CA-Oee"/>
+                            <constraint firstItem="8UH-Ux-jKg" firstAttribute="trailing" secondItem="fRP-ID-gKe" secondAttribute="trailing" id="kY6-gy-NW5"/>
+                            <constraint firstItem="bgF-Me-7Ad" firstAttribute="trailing" secondItem="8wL-cX-gMO" secondAttribute="trailing" constant="45" id="kcv-dG-Auk"/>
+                            <constraint firstItem="Z6t-cG-RKS" firstAttribute="centerX" secondItem="2AV-Ng-pPL" secondAttribute="centerX" constant="121" id="lp8-7B-WN8"/>
+                            <constraint firstItem="XKA-5r-Qxt" firstAttribute="trailing" secondItem="bgF-Me-7Ad" secondAttribute="trailing" constant="-120" id="mqD-ni-Le0"/>
+                            <constraint firstItem="74D-XL-UcS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="ng7-p3-rJe"/>
+                            <constraint firstItem="2AV-Ng-pPL" firstAttribute="top" secondItem="Z6t-cG-RKS" secondAttribute="bottom" constant="8" id="oiH-Bg-iRq"/>
+                            <constraint firstItem="2zj-a2-kz3" firstAttribute="top" secondItem="SYo-Q8-1QX" secondAttribute="bottom" constant="8" symbolic="YES" id="qut-kH-K4F"/>
+                            <constraint firstItem="aTe-Zo-QhF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="s2B-ga-MPL"/>
+                            <constraint firstItem="Z6t-cG-RKS" firstAttribute="top" secondItem="l5P-82-a7S" secondAttribute="bottom" constant="8" id="snu-yv-vPa"/>
+                            <constraint firstItem="bgF-Me-7Ad" firstAttribute="top" secondItem="XKA-5r-Qxt" secondAttribute="bottom" constant="-60" id="tXd-in-sLp"/>
+                            <constraint firstItem="l5P-82-a7S" firstAttribute="leading" secondItem="Mya-9U-eVo" secondAttribute="trailing" constant="60" id="uDC-Ic-AmK"/>
+                            <constraint firstItem="X6i-Vc-fZF" firstAttribute="top" secondItem="74D-XL-UcS" secondAttribute="bottom" constant="8" id="vJI-9O-YZl"/>
+                            <constraint firstItem="SYo-Q8-1QX" firstAttribute="trailing" secondItem="2zj-a2-kz3" secondAttribute="trailing" id="yGB-iw-5Se"/>
+                            <constraint firstItem="8wL-cX-gMO" firstAttribute="leading" secondItem="SYo-Q8-1QX" secondAttribute="leading" id="yIY-Q8-bXb"/>
+                            <constraint firstItem="l5P-82-a7S" firstAttribute="top" secondItem="74D-XL-UcS" secondAttribute="bottom" constant="8" id="yYa-hF-mGa"/>
+                            <constraint firstItem="8wL-cX-gMO" firstAttribute="trailing" secondItem="SYo-Q8-1QX" secondAttribute="trailing" id="znF-jA-ANl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Ub-RC-QVz"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="pageControl" destination="0YX-Ue-1WY" id="ykc-5L-tdb"/>
-                        <outlet property="scrollView" destination="a5R-KN-Ubd" id="dhx-zV-n6R"/>
+                        <outlet property="cheapButton" destination="2AV-Ng-pPL" id="Pam-5B-KZg"/>
+                        <outlet property="expensiveButton" destination="bgF-Me-7Ad" id="Nbc-O0-yqe"/>
+                        <outlet property="medianButton" destination="XKA-5r-Qxt" id="x3C-9N-P1D"/>
+                        <outlet property="servingSize" destination="l5P-82-a7S" id="gnC-W6-nYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,6 +353,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aR-ek-JI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="-672.41379310344837"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="nkM-vE-IkP">
+            <objects>
+                <viewController id="6hX-8p-cBs" customClass="SplashViewController" customModule="JustCook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WPY-eo-JxW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aFj-VQ-QRH">
+                                <rect key="frame" x="168" y="795" width="78" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9L-XU-bOv">
+                                <rect key="frame" x="-6" y="-5" width="420" height="901"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0re-85-isn" firstAttribute="trailing" secondItem="aFj-VQ-QRH" secondAttribute="trailing" constant="168" id="BbF-a1-qpX"/>
+                            <constraint firstItem="M9L-XU-bOv" firstAttribute="width" secondItem="WPY-eo-JxW" secondAttribute="width" constant="6" id="JBp-22-8FB"/>
+                            <constraint firstItem="M9L-XU-bOv" firstAttribute="centerY" secondItem="0re-85-isn" secondAttribute="centerY" constant="-7.5" id="TSX-Au-Vtd"/>
+                            <constraint firstItem="aFj-VQ-QRH" firstAttribute="leading" secondItem="0re-85-isn" secondAttribute="leading" constant="168" id="UeK-Ml-KVb"/>
+                            <constraint firstItem="aFj-VQ-QRH" firstAttribute="centerX" secondItem="0re-85-isn" secondAttribute="centerX" id="W0b-iU-Z4a"/>
+                            <constraint firstItem="M9L-XU-bOv" firstAttribute="centerX" secondItem="0re-85-isn" secondAttribute="centerX" constant="-3" id="djp-Ue-n9u"/>
+                            <constraint firstItem="0re-85-isn" firstAttribute="bottom" secondItem="aFj-VQ-QRH" secondAttribute="bottom" constant="30" id="vwM-At-zZv"/>
+                            <constraint firstItem="M9L-XU-bOv" firstAttribute="height" secondItem="WPY-eo-JxW" secondAttribute="height" constant="5" id="zXe-TE-qLK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0re-85-isn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vma-IC-m78"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="pageControl" destination="aFj-VQ-QRH" id="9aC-g9-4RS"/>
+                        <outlet property="scrollView" destination="M9L-XU-bOv" id="Bi9-ha-aNq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfb-T5-nZ0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="29"/>
         </scene>
     </scenes>
 </document>
