@@ -225,7 +225,7 @@
                                     <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CcH-y7-jLN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-ID-gKe" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRP-ID-gKe" customClass="CustomButton" customModule="JustCook" customModuleProvider="target">
                                 <rect key="frame" x="103" y="696" width="209" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aDr-2h-Z6l"/>
@@ -265,6 +265,30 @@
                                     <action selector="selectDates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VV0-pa-BqB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBU-Na-WDc">
+                                <rect key="frame" x="0.0" y="803" width="414" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0de-Jd-0OX">
+                                        <rect key="frame" x="103" y="24" width="209" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWv-Fs-Pmi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -327,6 +351,8 @@
                     <navigationItem key="navigationItem" id="3Ub-RC-QVz"/>
                     <connections>
                         <outlet property="cheapButton" destination="2AV-Ng-pPL" id="Pam-5B-KZg"/>
+                        <outlet property="continueButton" destination="0de-Jd-0OX" id="CFl-NM-eBG"/>
+                        <outlet property="continueView" destination="zBU-Na-WDc" id="xPs-A2-aeW"/>
                         <outlet property="expensiveButton" destination="bgF-Me-7Ad" id="Nbc-O0-yqe"/>
                         <outlet property="medianButton" destination="XKA-5r-Qxt" id="x3C-9N-P1D"/>
                         <outlet property="servingSize" destination="l5P-82-a7S" id="gnC-W6-nYw"/>

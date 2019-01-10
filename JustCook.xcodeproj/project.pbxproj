@@ -23,6 +23,8 @@
 		EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */; };
 		EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42621E5442C007922C6 /* UIHelper.swift */; };
 		EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42921E545B4007922C6 /* Colours.swift */; };
+		EFDEB8B121E7D8C800ADFE9B /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */; };
+		EFDEB8B321E7DA2D00ADFE9B /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */; };
 		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		EFA6B42621E5442C007922C6 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EFA6B42921E545B4007922C6 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
+				EFDEB8AF21E7D8B400ADFE9B /* Models */,
 				EFA6B42821E545A9007922C6 /* Constants */,
 				EFA6B42521E5441C007922C6 /* Helpers */,
 				EFA6B42221E53A99007922C6 /* Core */,
@@ -115,6 +120,7 @@
 			children = (
 				649DABD821DE81DE004A9485 /* SplashViewController.swift */,
 				EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */,
+				EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +197,14 @@
 				EFA6B42921E545B4007922C6 /* Colours.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		EFDEB8AF21E7D8B400ADFE9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
+				EFDEB8B321E7DA2D00ADFE9B /* RecipesViewController.swift in Sources */,
+				EFDEB8B121E7D8C800ADFE9B /* UserPreferences.swift in Sources */,
 				EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */,
 				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
 				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
