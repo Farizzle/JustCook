@@ -472,6 +472,22 @@
             </objects>
             <point key="canvasLocation" x="1085.5072463768117" y="28.794642857142854"/>
         </scene>
+        <!--Recipe Details View Controller-->
+        <scene sceneID="Dn1-U3-dTM">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailsViewController" id="5f9-0b-gi7" customClass="RecipeDetailsViewController" customModule="JustCook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BDh-ki-wxI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="V3l-3t-iWc"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZeR-sM-gKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987" y="29"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yXv-Pb-EWl">
             <objects>

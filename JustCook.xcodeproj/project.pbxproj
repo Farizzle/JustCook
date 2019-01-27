@@ -21,6 +21,7 @@
 		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
 		EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */; };
 		EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */; };
+		EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */; };
 		EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CE21F4EC400025CE9E /* fivestar.png */; };
 		EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CF21F4EC420025CE9E /* onestar.png */; };
 		EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D021F4EC430025CE9E /* threestar.png */; };
@@ -55,6 +56,7 @@
 		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
+		EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		EF1AC9CE21F4EC400025CE9E /* fivestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fivestar.png; sourceTree = "<group>"; };
 		EF1AC9CF21F4EC420025CE9E /* onestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onestar.png; sourceTree = "<group>"; };
 		EF1AC9D021F4EC430025CE9E /* threestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threestar.png; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				649DABD821DE81DE004A9485 /* SplashViewController.swift */,
 				EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */,
 				EFB0B83121F38C4300277629 /* RecipesViewController.swift */,
+				EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				EFB0B83221F38C4300277629 /* RecipesViewController.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 				EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */,
+				EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
