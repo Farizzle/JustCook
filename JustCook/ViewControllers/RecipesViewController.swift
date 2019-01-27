@@ -28,6 +28,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
 
         dataSource = recipesCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
+            print("DATA: \(documentSnapshot.data()!)")
             self.recipes.append(Recipes(dictionary: documentSnapshot.data())!)
             cell.recipeTitle.text = self.recipes[indexPath.row].name
             cell.recipeCuisine.text = self.recipes[indexPath.row].cuisineType
@@ -60,8 +61,8 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     if let data = try? Data( contentsOf:url)
                     {
                         DispatchQueue.main.async {
-                            cell.recipeImage.image = UIImage(data:data)
-                            self.recipeIcons.append(UIImage(data: data)!)
+                            let recipeImage = UIImage(data: data)
+                            cell.recipeImage.image = recipeImage
                         }
                     }
                 }
@@ -91,14 +92,11 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
-        
+        let cell = collectionView.cellForItem(at: indexPath) as! RecipesCell
         let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
         recipeDetails.recipeItem = recipes[indexPath.row]
-        guard let image: UIImage = recipeIcons[indexPath.row] else {return}
-        recipeDetails.recipeImage = image
+        recipeDetails.recipeImage = cell.recipeImage.image!
         self.navigationController?.pushViewController(recipeDetails, animated: true)
     }
 
