@@ -16,6 +16,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var recipesCollectionView: UICollectionView!
     var recipes = [Recipes]()
+    var recipeIcons = [UIImage]()
     var dataSource : FUIFirestoreCollectionViewDataSource!
     
     override func viewDidLoad() {
@@ -59,7 +60,8 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     if let data = try? Data( contentsOf:url)
                     {
                         DispatchQueue.main.async {
-                            cell.recipeImage.image = UIImage( data:data)
+                            cell.recipeImage.image = UIImage(data:data)
+                            self.recipeIcons.append(UIImage(data: data)!)
                         }
                     }
                 }
@@ -84,7 +86,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
         
         let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
-        recipeDetails.navTitle = cell.recipeTitle.text ?? ""
         present(recipeDetails, animated: true, completion: nil)
         
         return cell
@@ -95,7 +96,9 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
         
         let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
-        recipeDetails.navTitle = recipes[indexPath.row].name
+        recipeDetails.recipeItem = recipes[indexPath.row]
+        guard let image: UIImage = recipeIcons[indexPath.row] else {return}
+        recipeDetails.recipeImage = image
         self.navigationController?.pushViewController(recipeDetails, animated: true)
     }
 
