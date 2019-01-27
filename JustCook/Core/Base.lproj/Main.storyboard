@@ -483,20 +483,98 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35n-n1-YHB">
                                 <rect key="frame" x="20" y="108" width="374" height="257"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-iS-9Vc">
+                                <rect key="frame" x="20" y="373" width="374" height="82"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELZ-wf-tYe">
+                                <rect key="frame" x="0.0" y="463" width="414" height="138"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alarmclock.png" translatesAutoresizingMaskIntoConstraints="NO" id="erZ-Tt-edc">
+                                        <rect key="frame" x="31" y="39" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-ww-Yih">
+                                        <rect key="frame" x="177" y="39" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fridgewhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="txq-vT-GmR">
+                                        <rect key="frame" x="323" y="39" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-06-XcH">
+                                        <rect key="frame" x="31" y="109" width="60" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-VO-3op">
+                                        <rect key="frame" x="323" y="109" width="60" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke7-Pm-M3R">
+                                        <rect key="frame" x="167" y="109" width="80" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipk-XB-UYF">
+                                <rect key="frame" x="20" y="463" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-As-l62">
+                                <rect key="frame" x="20" y="609" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uEQ-iS-9Vc" firstAttribute="trailing" secondItem="35n-n1-YHB" secondAttribute="trailing" id="4iA-m4-gAQ"/>
+                            <constraint firstItem="V3l-3t-iWc" firstAttribute="bottom" secondItem="uEQ-iS-9Vc" secondAttribute="bottom" constant="407" id="5M0-vy-BAQ"/>
+                            <constraint firstItem="uEQ-iS-9Vc" firstAttribute="leading" secondItem="35n-n1-YHB" secondAttribute="leading" id="7Di-3k-uwa"/>
+                            <constraint firstItem="V3l-3t-iWc" firstAttribute="bottom" secondItem="ipk-XB-UYF" secondAttribute="bottom" constant="369" id="Be5-9c-9pi"/>
                             <constraint firstItem="35n-n1-YHB" firstAttribute="top" secondItem="V3l-3t-iWc" secondAttribute="top" constant="20" id="JiC-rB-nTX"/>
+                            <constraint firstItem="ELZ-wf-tYe" firstAttribute="top" secondItem="uEQ-iS-9Vc" secondAttribute="bottom" constant="8" symbolic="YES" id="K3N-MD-VzS"/>
+                            <constraint firstItem="ipk-XB-UYF" firstAttribute="leading" secondItem="uEQ-iS-9Vc" secondAttribute="leading" id="QDz-Tw-KFU"/>
+                            <constraint firstItem="ipk-XB-UYF" firstAttribute="top" secondItem="ELZ-wf-tYe" secondAttribute="top" id="Rzt-rS-UP7"/>
+                            <constraint firstItem="uEQ-iS-9Vc" firstAttribute="top" secondItem="35n-n1-YHB" secondAttribute="bottom" constant="8" symbolic="YES" id="Zlh-zq-AJ6"/>
+                            <constraint firstItem="ELZ-wf-tYe" firstAttribute="leading" secondItem="BDh-ki-wxI" secondAttribute="leading" id="g03-lV-yba"/>
+                            <constraint firstItem="ELZ-wf-tYe" firstAttribute="centerX" secondItem="uEQ-iS-9Vc" secondAttribute="centerX" id="g6W-Nk-Yml"/>
                             <constraint firstItem="35n-n1-YHB" firstAttribute="leading" secondItem="V3l-3t-iWc" secondAttribute="leading" constant="20" id="ggf-pQ-UJh"/>
                             <constraint firstItem="35n-n1-YHB" firstAttribute="centerX" secondItem="V3l-3t-iWc" secondAttribute="centerX" id="hEU-f5-0tm"/>
                             <constraint firstItem="V3l-3t-iWc" firstAttribute="bottom" secondItem="35n-n1-YHB" secondAttribute="bottom" constant="497" id="iWt-zC-Quv"/>
                             <constraint firstItem="V3l-3t-iWc" firstAttribute="trailing" secondItem="35n-n1-YHB" secondAttribute="trailing" constant="20" id="nWN-n5-k6r"/>
+                            <constraint firstItem="V3l-3t-iWc" firstAttribute="bottom" secondItem="ELZ-wf-tYe" secondAttribute="bottom" constant="261" id="wiq-GN-peu"/>
+                            <constraint firstItem="ipk-XB-UYF" firstAttribute="trailing" secondItem="uEQ-iS-9Vc" secondAttribute="trailing" id="yC2-uY-ArI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V3l-3t-iWc"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="recipeImageView" destination="35n-n1-YHB" id="dZn-oK-dbh"/>
+                        <outlet property="caloriesImage" destination="MTk-ww-Yih" id="ZY9-DB-rEi"/>
+                        <outlet property="caloriesLabel" destination="ke7-Pm-M3R" id="x7w-5s-6VJ"/>
+                        <outlet property="cookTimeImage" destination="erZ-Tt-edc" id="y3c-NB-bZ2"/>
+                        <outlet property="cookTimeLabel" destination="qWn-06-XcH" id="HKF-f3-an6"/>
+                        <outlet property="fridgeDateLabel" destination="6OE-VO-3op" id="vaT-TY-3q6"/>
+                        <outlet property="fridgeImage" destination="txq-vT-GmR" id="BAn-lf-6wr"/>
+                        <outlet property="recipeDescription" destination="uEQ-iS-9Vc" id="0Ui-yY-bq9"/>
+                        <outlet property="recipeImageView" destination="35n-n1-YHB" id="MUX-T3-y1b"/>
+                        <outlet property="servingSizeLabel" destination="ipk-XB-UYF" id="svW-70-cY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeR-sM-gKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -562,6 +640,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alarmclock.png" width="240" height="240"/>
+        <image name="fire.png" width="256" height="256"/>
+        <image name="fridgewhite.png" width="256" height="256"/>
         <image name="onestar.png" width="240" height="240"/>
     </resources>
 </document>

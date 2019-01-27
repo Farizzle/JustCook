@@ -22,6 +22,9 @@
 		EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */; };
 		EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */; };
 		EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */; };
+		EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB8F21FE101F004679B0 /* alarmclock.png */; };
+		EF15CB9221FE10D0004679B0 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB9121FE10D0004679B0 /* fire.png */; };
+		EF15CB9421FE1196004679B0 /* fridgewhite.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB9321FE1196004679B0 /* fridgewhite.png */; };
 		EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CE21F4EC400025CE9E /* fivestar.png */; };
 		EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CF21F4EC420025CE9E /* onestar.png */; };
 		EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D021F4EC430025CE9E /* threestar.png */; };
@@ -57,6 +60,9 @@
 		81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
 		EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		EF15CB8F21FE101F004679B0 /* alarmclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarmclock.png; sourceTree = "<group>"; };
+		EF15CB9121FE10D0004679B0 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		EF15CB9321FE1196004679B0 /* fridgewhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fridgewhite.png; sourceTree = "<group>"; };
 		EF1AC9CE21F4EC400025CE9E /* fivestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fivestar.png; sourceTree = "<group>"; };
 		EF1AC9CF21F4EC420025CE9E /* onestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onestar.png; sourceTree = "<group>"; };
 		EF1AC9D021F4EC430025CE9E /* threestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threestar.png; sourceTree = "<group>"; };
@@ -172,7 +178,10 @@
 				EF1AC9CF21F4EC420025CE9E /* onestar.png */,
 				EF1AC9D021F4EC430025CE9E /* threestar.png */,
 				EF1AC9D221F4EC460025CE9E /* twostar.png */,
+				EF15CB9121FE10D0004679B0 /* fire.png */,
+				EF15CB9321FE1196004679B0 /* fridgewhite.png */,
 				6407C74621DE936900845D59 /* grocery (2).png */,
+				EF15CB8F21FE101F004679B0 /* alarmclock.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -304,13 +313,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6407C74C21DE94A200845D59 /* OFL.txt in Resources */,
+				EF15CB9221FE10D0004679B0 /* fire.png in Resources */,
 				6407C74721DE936900845D59 /* grocery (2).png in Resources */,
 				649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */,
 				649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */,
 				6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */,
 				649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */,
+				EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */,
 				EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */,
 				EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */,
+				EF15CB9421FE1196004679B0 /* fridgewhite.png in Resources */,
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
 				EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */,
 				EF1AC9D621F4EC460025CE9E /* fourstar.png in Resources */,
