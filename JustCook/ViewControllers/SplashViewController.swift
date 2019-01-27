@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SplashViewController: UIViewController, UIScrollViewDelegate {
     
@@ -18,6 +19,7 @@ class SplashViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
 
     var slides:[Slide] = [];
+    var userDetails:[NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,11 @@ class SplashViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        
+        userDetails = CoreDataHelper.loadCoreData(entityName: "User");
+        print(userDetails[0].value(forKey: "servingSize") as Any)
+        print(userDetails[0].value(forKey: "budget") as Any)
+        print(userDetails[0].value(forKey: "selectedDates") as? String)
     }
     
     func createSlides() -> [Slide] {

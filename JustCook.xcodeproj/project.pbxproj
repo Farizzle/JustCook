@@ -19,18 +19,26 @@
 		649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDD21DE81E0004A9485 /* Assets.xcassets */; };
 		649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649DABDF21DE81E0004A9485 /* LaunchScreen.storyboard */; };
 		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
-		839873259D4C4E4E2AB31990 /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */; };
+		EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */; };
+		EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */; };
+		EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CE21F4EC400025CE9E /* fivestar.png */; };
+		EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9CF21F4EC420025CE9E /* onestar.png */; };
+		EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D021F4EC430025CE9E /* threestar.png */; };
+		EF1AC9D621F4EC460025CE9E /* fourstar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D121F4EC450025CE9E /* fourstar.png */; };
+		EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D221F4EC460025CE9E /* twostar.png */; };
+		EF5F695121EFA0FC00D7464F /* UserPrefs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5F694F21EFA0FC00D7464F /* UserPrefs.xcdatamodeld */; };
+		EF5F695321EFA1AF00D7464F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F695221EFA1AF00D7464F /* CoreDataHelper.swift */; };
 		EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */; };
 		EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42621E5442C007922C6 /* UIHelper.swift */; };
 		EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42921E545B4007922C6 /* Colours.swift */; };
-		EFDEB8B121E7D8C800ADFE9B /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */; };
-		EFDEB8B321E7DA2D00ADFE9B /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */; };
+		EFB0B83221F38C4300277629 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0B83121F38C4300277629 /* RecipesViewController.swift */; };
+		EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0B83421F38D9B00277629 /* Recipes.swift */; };
 		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60CAA51C4B791335C3B59EA4 /* Pods-JustCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.release.xcconfig"; path = "Target Support Files/Pods-JustCook/Pods-JustCook.release.xcconfig"; sourceTree = "<group>"; };
+		2898315B78818641DB8D7469 /* Pods-JustCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustCook/Pods-JustCook.debug.xcconfig"; sourceTree = "<group>"; };
+		3F8FFE7F4B1B088A34B4B14E /* Pods-JustCook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustCook/Pods-JustCook.release.xcconfig"; sourceTree = "<group>"; };
 		6407C74621DE936900845D59 /* grocery (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grocery (2).png"; sourceTree = "<group>"; };
 		6407C74821DE94A100845D59 /* OFL-FAQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-FAQ.txt"; sourceTree = "<group>"; };
 		6407C74921DE94A200845D59 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -45,12 +53,20 @@
 		649DABE021DE81E0004A9485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		649DABE221DE81E0004A9485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustCook.debug.xcconfig"; path = "Target Support Files/Pods-JustCook/Pods-JustCook.debug.xcconfig"; sourceTree = "<group>"; };
+		81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
+		EF1AC9CE21F4EC400025CE9E /* fivestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fivestar.png; sourceTree = "<group>"; };
+		EF1AC9CF21F4EC420025CE9E /* onestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onestar.png; sourceTree = "<group>"; };
+		EF1AC9D021F4EC430025CE9E /* threestar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threestar.png; sourceTree = "<group>"; };
+		EF1AC9D121F4EC450025CE9E /* fourstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourstar.png; sourceTree = "<group>"; };
+		EF1AC9D221F4EC460025CE9E /* twostar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twostar.png; sourceTree = "<group>"; };
+		EF5F695021EFA0FC00D7464F /* UserPrefs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserPrefs.xcdatamodel; sourceTree = "<group>"; };
+		EF5F695221EFA1AF00D7464F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		EFA6B42621E5442C007922C6 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EFA6B42921E545B4007922C6 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
-		EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		EFB0B83121F38C4300277629 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		EFB0B83421F38D9B00277629 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,20 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839873259D4C4E4E2AB31990 /* Pods_JustCook.framework in Frameworks */,
+				EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1022F0BD9E09CAD385F0144E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		649DABCA21DE81DE004A9485 = {
 			isa = PBXGroup;
 			children = (
 				649DABD521DE81DE004A9485 /* JustCook */,
 				649DABD421DE81DE004A9485 /* Products */,
-				7847BA5519804A95B448AE51 /* Pods */,
-				AAAAACB57F6BA34D308530EA /* Frameworks */,
+				BCFD746F1EA874B4F85440E5 /* Pods */,
+				1022F0BD9E09CAD385F0144E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +111,8 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
-				EFDEB8AF21E7D8B400ADFE9B /* Models */,
+				EFB0B83321F38D8400277629 /* DataModels */,
+				EFDEB8AF21E7D8B400ADFE9B /* CoreDataModels */,
 				EFA6B42821E545A9007922C6 /* Constants */,
 				EFA6B42521E5441C007922C6 /* Helpers */,
 				EFA6B42221E53A99007922C6 /* Core */,
@@ -98,21 +123,13 @@
 			path = JustCook;
 			sourceTree = "<group>";
 		};
-		7847BA5519804A95B448AE51 /* Pods */ = {
+		BCFD746F1EA874B4F85440E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */,
-				60CAA51C4B791335C3B59EA4 /* Pods-JustCook.release.xcconfig */,
+				2898315B78818641DB8D7469 /* Pods-JustCook.debug.xcconfig */,
+				3F8FFE7F4B1B088A34B4B14E /* Pods-JustCook.release.xcconfig */,
 			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		AAAAACB57F6BA34D308530EA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B32D22FC48E2F36BB6923AB /* Pods_JustCook.framework */,
-			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EFA6B41C21E53A4C007922C6 /* ViewControllers */ = {
@@ -120,7 +137,7 @@
 			children = (
 				649DABD821DE81DE004A9485 /* SplashViewController.swift */,
 				EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */,
-				EFDEB8B221E7DA2D00ADFE9B /* RecipesViewController.swift */,
+				EFB0B83121F38C4300277629 /* RecipesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				649DABDD21DE81E0004A9485 /* Assets.xcassets */,
+				EF1AC9CE21F4EC400025CE9E /* fivestar.png */,
+				EF1AC9D121F4EC450025CE9E /* fourstar.png */,
+				EF1AC9CF21F4EC420025CE9E /* onestar.png */,
+				EF1AC9D021F4EC430025CE9E /* threestar.png */,
+				EF1AC9D221F4EC460025CE9E /* twostar.png */,
 				6407C74621DE936900845D59 /* grocery (2).png */,
 			);
 			path = Images;
@@ -167,6 +189,7 @@
 			children = (
 				6460935221DEA07D00A2F17B /* Slide.swift */,
 				6460935421DEA09400A2F17B /* Slide.xib */,
+				EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -187,6 +210,7 @@
 			children = (
 				EFA6B42621E5442C007922C6 /* UIHelper.swift */,
 				EFEC13C021E690080048D11C /* CustomButton.swift */,
+				EF5F695221EFA1AF00D7464F /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,12 +223,20 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		EFDEB8AF21E7D8B400ADFE9B /* Models */ = {
+		EFB0B83321F38D8400277629 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				EFDEB8B021E7D8C800ADFE9B /* UserPreferences.swift */,
+				EFB0B83421F38D9B00277629 /* Recipes.swift */,
 			);
-			path = Models;
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		EFDEB8AF21E7D8B400ADFE9B /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F694F21EFA0FC00D7464F /* UserPrefs.xcdatamodeld */,
+			);
+			path = CoreDataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 649DABE521DE81E0004A9485 /* Build configuration list for PBXNativeTarget "JustCook" */;
 			buildPhases = (
-				D9CE0B215C127DF13D4A55D3 /* [CP] Check Pods Manifest.lock */,
+				4DF3AF683AB9727D5BE34D47 /* [CP] Check Pods Manifest.lock */,
 				649DABCF21DE81DE004A9485 /* Sources */,
 				649DABD021DE81DE004A9485 /* Frameworks */,
 				649DABD121DE81DE004A9485 /* Resources */,
-				5C53A0F538957082C396E63C /* [CP] Embed Pods Frameworks */,
+				D71DEC45E2CD3B81D8AC5A43 /* [CP] Embed Pods Frameworks */,
+				C5F5631459F9FC43AC3C35CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +306,12 @@
 				649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */,
 				6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */,
 				649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */,
+				EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */,
+				EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */,
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
+				EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */,
+				EF1AC9D621F4EC460025CE9E /* fourstar.png in Resources */,
+				EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */,
 				6407C74B21DE94A200845D59 /* OFL-FAQ.txt in Resources */,
 				6460935521DEA09400A2F17B /* Slide.xib in Resources */,
 			);
@@ -282,51 +320,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C53A0F538957082C396E63C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JustCook/Pods-JustCook-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Sparrow/Sparrow.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenteredCollectionView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparrow.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JustCook/Pods-JustCook-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9CE0B215C127DF13D4A55D3 /* [CP] Check Pods Manifest.lock */ = {
+		4DF3AF683AB9727D5BE34D47 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,6 +342,96 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C5F5631459F9FC43AC3C35CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustCook/Pods-JustCook-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustCook/Pods-JustCook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D71DEC45E2CD3B81D8AC5A43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustCook/Pods-JustCook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Sparrow/Sparrow.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparrow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustCook/Pods-JustCook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,15 +439,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F695321EFA1AF00D7464F /* CoreDataHelper.swift in Sources */,
 				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
-				EFDEB8B321E7DA2D00ADFE9B /* RecipesViewController.swift in Sources */,
-				EFDEB8B121E7D8C800ADFE9B /* UserPreferences.swift in Sources */,
+				EF5F695121EFA0FC00D7464F /* UserPrefs.xcdatamodeld in Sources */,
 				EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */,
 				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
 				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
+				EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */,
 				EFEC13C121E690080048D11C /* CustomButton.swift in Sources */,
 				EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */,
+				EFB0B83221F38C4300277629 /* RecipesViewController.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
+				EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +594,7 @@
 		};
 		649DABE621DE81E0004A9485 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9A51E48E5245A1B5BD34933 /* Pods-JustCook.debug.xcconfig */;
+			baseConfigurationReference = 2898315B78818641DB8D7469 /* Pods-JustCook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -526,7 +614,7 @@
 		};
 		649DABE721DE81E0004A9485 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60CAA51C4B791335C3B59EA4 /* Pods-JustCook.release.xcconfig */;
+			baseConfigurationReference = 3F8FFE7F4B1B088A34B4B14E /* Pods-JustCook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -565,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF5F694F21EFA0FC00D7464F /* UserPrefs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF5F695021EFA0FC00D7464F /* UserPrefs.xcdatamodel */,
+			);
+			currentVersion = EF5F695021EFA0FC00D7464F /* UserPrefs.xcdatamodel */;
+			path = UserPrefs.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 649DABCB21DE81DE004A9485 /* Project object */;
 }

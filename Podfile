@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '9.0'
 
 target 'JustCook' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -10,6 +10,6 @@ target 'JustCook' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Sparrow/LaunchAnimation’, :git => 'https://github.com/IvanVorobei/Sparrow.git’
-pod 'CenteredCollectionView'
+pod 'FirebaseUI', '~> 5.0'
 
 end

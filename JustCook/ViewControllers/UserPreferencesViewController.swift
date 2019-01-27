@@ -84,7 +84,6 @@ class UserPreferencesViewController: UIViewController {
     }
     
     private func refineSelectedDates(thisDate: String, currentDates: NSMutableArray, buttonSelected: Bool) -> NSMutableArray{
-        
         if (buttonSelected){
             if (!currentDates.contains(thisDate)){
                 currentDates.add(thisDate)
@@ -107,10 +106,7 @@ class UserPreferencesViewController: UIViewController {
     }
     
     @IBAction func continueButtonAction(_ sender: Any) {
-        var userPrefs: UserPreferences = UserPreferences.init(servingSize: self.servingSizeNumber, budgetPrice: budgetIndicator, selectedDates: selectedDatesList as! Array<String>)
-        print("Serving Size = \(String(describing: userPrefs.servingSize))")
-        print("Budget Price = \(String(describing: userPrefs.budgetPrice))")
-        print("Selected Dates = \(String(describing: userPrefs.selectedDates))")
+        CoreDataHelper.saveUser(entityName: "User", servingSize: servingSizeNumber, budget: budgetIndicator, selectedDate: "hello")
     }
     
     override func viewDidLoad() {
