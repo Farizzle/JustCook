@@ -10,16 +10,18 @@ import UIKit
 
 class RecipeDetailsViewController: UIViewController {
     
-    public var navTitle = String()
     public var recipeItem = Recipes()
-
+    public var recipeImage = UIImage()
+    @IBOutlet weak var recipeImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 1/255, green: 174/255, blue: 240/255, alpha: 1)
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.topItem?.title = navTitle
+        self.title = recipeItem?.name
+        self.recipeImageView.image = recipeImage
     }
     
 
