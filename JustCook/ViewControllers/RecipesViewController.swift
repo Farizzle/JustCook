@@ -21,6 +21,8 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.title = "Recipes"
+        
         let query = db.collection("recipes")
 
         dataSource = recipesCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
