@@ -25,7 +25,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.navigationController?.title = "Recipes"
         
         let query = db.collection("recipes")
-
         dataSource = recipesCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
             print("DATA: \(documentSnapshot.data()!)")
@@ -41,6 +40,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 break
             case 3:
                 cell.recipeRating.image = UIImage.init(named: "threestar.png")
+                
                 break
             case 4:
                 cell.recipeRating.image = UIImage.init(named: "fourstar.png")
@@ -76,7 +76,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         recipesCollectionView.reloadData()
 
         self.navigationController?.navigationItem.title = "Recipes"
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -8,12 +8,17 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseUI
 
-class RecipeDetailsViewController: UIViewController {
+class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     public var recipeItem = Recipes()
     public var recipeImage = UIImage()
+    var ingredients = [Ingredients]()
     var userDetails:[NSManagedObject] = []
+    let db = Firestore.firestore()
+    var dataSource : FUIFirestoreCollectionViewDataSource!
 
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeDescription: UILabel!
@@ -24,6 +29,7 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var fridgeImage: UIImageView!
     @IBOutlet weak var fridgeDateLabel: UILabel!
+    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,8 @@ class RecipeDetailsViewController: UIViewController {
         self.caloriesImage.alpha = 0.0
         self.fridgeDateLabel.alpha = 0.0
         self.fridgeImage.alpha = 0.0
+        
+        getRecipeIngredients(recipeName: (recipeItem?.name)!)
 
         UINavigationBar.appearance().barTintColor = UIColor(red: 1/255, green: 174/255, blue: 240/255, alpha: 1)
         UINavigationBar.appearance().tintColor = .white
@@ -70,15 +78,64 @@ class RecipeDetailsViewController: UIViewController {
         }
     }
     
+    //# Firestore Query
+    func getRecipeIngredients(recipeName: String){
+        let query = db.collection("recipes").document(recipeName).collection("ingredients").document("sainsburys").collection(getBudgetString())
+        dataSource = ingredientsCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IngredientsCell", for: indexPath) as! IngredientsCell
+            print("Ingredients: \(documentSnapshot.data()!)")
+            self.ingredients.append(Ingredients(dictionary: documentSnapshot.data())!)
+            cell.ingredientName.text = self.ingredients[indexPath.row].name
+            cell.ingredientPrice.text = "Price: £\(self.ingredients[indexPath.row].price!)"
+            cell.ingredientWeight.text = "Weight: \(self.ingredients[indexPath.row].weight!)"
+            cell.ingredientQuantity.text = "Qnt: \(self.ingredients[indexPath.row].quantity!)"
+            let imageURL = self.ingredients[indexPath.row].ingredientIcon
+            
+            if let url = URL(string: imageURL ?? "")
+            {
+                DispatchQueue.global().async {
+                    if let data = try? Data( contentsOf:url)
+                    {
+                        DispatchQueue.main.async {
+                            let ingredientImage = UIImage(data: data)
+                            cell.ingredientImage.image = ingredientImage
+                        }
+                    }
+                }
+            }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            return cell
+        })
     }
-    */
+    
+    func getBudgetString() -> String {
+        let budgetInt = (userDetails[userDetails.count-1].value(forKey: "budget") as! Int)
+        var budgetString = String()
+        switch budgetInt {
+        case 1:
+            budgetString = "lowtier"
+            break
+        case 2:
+            budgetString = "midtier"
+            break
+        case 3:
+            budgetString = "hightier"
+            break
+        default:
+            return ""
+        }
+        return budgetString
+    }
+    
+    //# IngredientsCollectionView Delegates/DataSource
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ingredients.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IngredientsCell", for: indexPath) as! IngredientsCell
+        
+        return cell
+    }
 
 }

@@ -122,10 +122,7 @@ class SplashViewController: UIViewController, UIScrollViewDelegate {
             slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
             slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
         }
-    }
-    
-    
-    
+    }    
     
     func scrollView(_ scrollView: UIScrollView, didScrollToPercentageOffset percentageHorizontalOffset: CGFloat) {
         if(pageControl.currentPage == 0) {
