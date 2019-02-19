@@ -648,6 +648,122 @@
             </objects>
             <point key="canvasLocation" x="1986.9565217391305" y="28.794642857142854"/>
         </scene>
+        <!--Store Select View-->
+        <scene sceneID="O7Z-3R-LbZ">
+            <objects>
+                <viewController id="kWc-39-Mln" customClass="StoreSelectView" customModule="JustCook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nn3-iE-rSd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZB-Xu-bvJ">
+                                <rect key="frame" x="20" y="116" width="374" height="661"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adjust serving size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-O6-Yso">
+                                        <rect key="frame" x="8" y="8" width="358" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LK-KK-jrQ">
+                                        <rect key="frame" x="157" y="62" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHE-MX-A6a">
+                                        <rect key="frame" x="37" y="62" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decreaseServing:" destination="kWc-39-Mln" eventType="touchUpInside" id="9gf-tK-nAa"/>
+                                            <action selector="decreaseServing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgt-1s-7XA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1t-ca-rlS">
+                                        <rect key="frame" x="277" y="62" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="increaseServing:" destination="kWc-39-Mln" eventType="touchUpInside" id="AJj-ba-can"/>
+                                            <action selector="increaseServing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpt-0u-GxS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change supermarket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-yM-9lO">
+                                        <rect key="frame" x="8" y="130" width="358" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pro-P8-j46">
+                                        <rect key="frame" x="95" y="203" width="185" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="tesco.png"/>
+                                        <connections>
+                                            <action selector="selectSuperMarket:" destination="kWc-39-Mln" eventType="touchUpInside" id="frW-lW-sts"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-Sw-mhL">
+                                        <rect key="frame" x="95" y="287" width="185" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="sainsburys.png"/>
+                                        <connections>
+                                            <action selector="selectSuperMarket:" destination="kWc-39-Mln" eventType="touchUpInside" id="SdQ-k6-Fkz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-aT-jEU">
+                                        <rect key="frame" x="95" y="371" width="185" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="asda.png"/>
+                                        <connections>
+                                            <action selector="selectSuperMarket:" destination="kWc-39-Mln" eventType="touchUpInside" id="ine-D5-i25"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0q-6K-Y3R">
+                                        <rect key="frame" x="95" y="455" width="185" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="aldi.png"/>
+                                        <connections>
+                                            <action selector="selectSuperMarket:" destination="kWc-39-Mln" eventType="touchUpInside" id="7bu-nG-Xvn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-fH-lcT">
+                                        <rect key="frame" x="95" y="539" width="185" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="waitrose.png"/>
+                                        <connections>
+                                            <action selector="selectSuperMarket:" destination="kWc-39-Mln" eventType="touchUpInside" id="BFR-jS-jBg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="di9-hc-Tv7"/>
+                    </view>
+                    <connections>
+                        <outlet property="aldiButton" destination="D0q-6K-Y3R" id="qH6-HQ-bAr"/>
+                        <outlet property="asdaButton" destination="dIK-aT-jEU" id="XQu-w6-gEz"/>
+                        <outlet property="currentServingSize" destination="8LK-KK-jrQ" id="iom-Mg-sSo"/>
+                        <outlet property="decreaseServingButton" destination="sHE-MX-A6a" id="2I0-VZ-kRq"/>
+                        <outlet property="increaseServingButton" destination="Y1t-ca-rlS" id="3E1-BV-nOd"/>
+                        <outlet property="sainsburyButton" destination="iXa-Sw-mhL" id="T5Z-Oo-MPD"/>
+                        <outlet property="tescoButton" destination="Pro-P8-j46" id="a9Y-Y6-jKN"/>
+                        <outlet property="waitroseButton" destination="bBq-fH-lcT" id="ihv-aK-gr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlh-DM-MuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905.7971014492755" y="28.794642857142854"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yXv-Pb-EWl">
             <objects>
@@ -708,8 +824,13 @@
     </scenes>
     <resources>
         <image name="alarmclock.png" width="240" height="240"/>
+        <image name="aldi.png" width="320" height="106"/>
+        <image name="asda.png" width="320" height="95"/>
         <image name="fire.png" width="256" height="256"/>
         <image name="fridgewhite.png" width="256" height="256"/>
         <image name="onestar.png" width="240" height="240"/>
+        <image name="sainsburys.png" width="320" height="61"/>
+        <image name="tesco.png" width="640" height="170"/>
+        <image name="waitrose.png" width="640" height="133"/>
     </resources>
 </document>

@@ -40,7 +40,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 break
             case 3:
                 cell.recipeRating.image = UIImage.init(named: "threestar.png")
-                
                 break
             case 4:
                 cell.recipeRating.image = UIImage.init(named: "fourstar.png")
@@ -50,7 +49,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 break
             default:
                 print("Failed to get recipe ratings")
-                
             }
          
             let imageURL = self.recipes[indexPath.row].recipeIcon

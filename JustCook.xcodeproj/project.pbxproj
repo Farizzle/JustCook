@@ -39,6 +39,12 @@
 		EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0B83421F38D9B00277629 /* Recipes.swift */; };
 		EFB8787122109B1400CC1F13 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB8787022109B1400CC1F13 /* Ingredients.swift */; };
 		EFB8787322109F0C00CC1F13 /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB8787222109F0C00CC1F13 /* IngredientsCell.swift */; };
+		EFE1CE27221BEDC5007FE8C6 /* tesco.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE26221BEDC5007FE8C6 /* tesco.png */; };
+		EFE1CE29221BEE0E007FE8C6 /* sainsburys.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE28221BEE0E007FE8C6 /* sainsburys.png */; };
+		EFE1CE2B221BEE51007FE8C6 /* asda.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE2A221BEE51007FE8C6 /* asda.png */; };
+		EFE1CE2D221BEEE4007FE8C6 /* aldi.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE2C221BEEE4007FE8C6 /* aldi.png */; };
+		EFE1CE2F221BEF10007FE8C6 /* waitrose.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE2E221BEF10007FE8C6 /* waitrose.png */; };
+		EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */; };
 		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +85,12 @@
 		EFB0B83421F38D9B00277629 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		EFB8787022109B1400CC1F13 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		EFB8787222109F0C00CC1F13 /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
+		EFE1CE26221BEDC5007FE8C6 /* tesco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tesco.png; sourceTree = "<group>"; };
+		EFE1CE28221BEE0E007FE8C6 /* sainsburys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sainsburys.png; sourceTree = "<group>"; };
+		EFE1CE2A221BEE51007FE8C6 /* asda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asda.png; sourceTree = "<group>"; };
+		EFE1CE2C221BEEE4007FE8C6 /* aldi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aldi.png; sourceTree = "<group>"; };
+		EFE1CE2E221BEF10007FE8C6 /* waitrose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waitrose.png; sourceTree = "<group>"; };
+		EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSelectView.swift; sourceTree = "<group>"; };
 		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +163,7 @@
 				EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */,
 				EFB0B83121F38C4300277629 /* RecipesViewController.swift */,
 				EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */,
+				EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,10 +193,15 @@
 				EF1AC9CE21F4EC400025CE9E /* fivestar.png */,
 				EF1AC9D121F4EC450025CE9E /* fourstar.png */,
 				EF1AC9CF21F4EC420025CE9E /* onestar.png */,
+				EFE1CE2C221BEEE4007FE8C6 /* aldi.png */,
 				EF1AC9D021F4EC430025CE9E /* threestar.png */,
 				EF1AC9D221F4EC460025CE9E /* twostar.png */,
+				EFE1CE2A221BEE51007FE8C6 /* asda.png */,
 				EF15CB9121FE10D0004679B0 /* fire.png */,
+				EFE1CE2E221BEF10007FE8C6 /* waitrose.png */,
 				EF15CB9321FE1196004679B0 /* fridgewhite.png */,
+				EFE1CE26221BEDC5007FE8C6 /* tesco.png */,
+				EFE1CE28221BEE0E007FE8C6 /* sainsburys.png */,
 				6407C74621DE936900845D59 /* grocery (2).png */,
 				EF15CB8F21FE101F004679B0 /* alarmclock.png */,
 			);
@@ -326,15 +344,20 @@
 				6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */,
 				649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */,
 				EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */,
+				EFE1CE29221BEE0E007FE8C6 /* sainsburys.png in Resources */,
+				EFE1CE27221BEDC5007FE8C6 /* tesco.png in Resources */,
 				EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */,
 				EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */,
 				EF15CB9421FE1196004679B0 /* fridgewhite.png in Resources */,
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
+				EFE1CE2D221BEEE4007FE8C6 /* aldi.png in Resources */,
 				EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */,
 				EF1AC9D621F4EC460025CE9E /* fourstar.png in Resources */,
+				EFE1CE2B221BEE51007FE8C6 /* asda.png in Resources */,
 				EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */,
 				6407C74B21DE94A200845D59 /* OFL-FAQ.txt in Resources */,
 				6460935521DEA09400A2F17B /* Slide.xib in Resources */,
+				EFE1CE2F221BEF10007FE8C6 /* waitrose.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +491,7 @@
 				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
 				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
 				EFB8787322109F0C00CC1F13 /* IngredientsCell.swift in Sources */,
+				EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */,
 				EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */,
 				EFEC13C121E690080048D11C /* CustomButton.swift in Sources */,
 				EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */,
