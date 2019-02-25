@@ -24,6 +24,15 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         self.navigationController?.title = "Recipes"
         
+        let shoppingCart = UIButton(type: .custom)
+        shoppingCart.setImage(UIImage(named: "shopping-basket"), for: .normal)
+        shoppingCart.frame = CGRect(x: self.view.frame.width, y: 0, width: 25, height: 25)
+        shoppingCart.addTarget(self, action: #selector(goToShoppingCart), for: .touchUpInside)
+        shoppingCart.imageView?.contentMode = .scaleAspectFit
+        shoppingCart.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 0)
+        let shoppingCartView = UIBarButtonItem(customView: shoppingCart)
+
+        self.navigationItem.setRightBarButton(shoppingCartView, animated: true)
         let query = db.collection("recipes")
         dataSource = recipesCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
@@ -65,7 +74,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                     }
                 }
             }
-
+            
             return cell
         })
         
@@ -74,6 +83,11 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         recipesCollectionView.reloadData()
 
         self.navigationController?.navigationItem.title = "Recipes"
+    }
+    
+    @objc func goToShoppingCart(){
+        let shoppingCartVC = storyboard?.instantiateViewController(withIdentifier: "ShoppingCartViewController") as! ShoppingCartViewController
+        self.navigationController?.pushViewController(shoppingCartVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -11,7 +11,11 @@ import CoreData
 import Firebase
 import FirebaseUI
 
-class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol StoreDelegate {
+    func changeSuperMarket(superMarket: String)
+}
+
+class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, StoreDelegate {
     
     public var recipeItem = Recipes()
     public var recipeImage = UIImage()
@@ -19,7 +23,9 @@ class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource,
     var userDetails:[NSManagedObject] = []
     let db = Firestore.firestore()
     var dataSource : FUIFirestoreCollectionViewDataSource!
-
+    var supermarket = String()
+    var recipePrice : Double = 0
+    
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeDescription: UILabel!
     @IBOutlet weak var servingSizeLabel: UILabel!
@@ -30,25 +36,36 @@ class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var fridgeImage: UIImageView!
     @IBOutlet weak var fridgeDateLabel: UILabel!
     @IBOutlet weak var ingredientsCollectionView: UICollectionView!
+    @IBOutlet weak var addToCartButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userDetails = CoreDataHelper.loadCoreData(entityName: "User");
         let servingSize = (userDetails[userDetails.count-1].value(forKey: "servingSize") as! Int)
-
+        
         self.cookTimeLabel.alpha = 0.0
         self.cookTimeImage.alpha = 0.0
         self.caloriesLabel.alpha = 0.0
         self.caloriesImage.alpha = 0.0
         self.fridgeDateLabel.alpha = 0.0
         self.fridgeImage.alpha = 0.0
+        supermarket = "sainsburys"
         
         getRecipeIngredients(recipeName: (recipeItem?.name)!)
-
+        
+        let refineButton = UIButton(type: .custom)
+        refineButton.setImage(UIImage(named: "shop"), for: .normal)
+        refineButton.frame = CGRect(x: self.view.frame.width, y: 0, width: 25, height: 25)
+        refineButton.addTarget(self, action: #selector(showSelectionView), for: .touchUpInside)
+        refineButton.imageView?.contentMode = .scaleAspectFit
+        refineButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 0)
+        let refineButtonView = UIBarButtonItem(customView: refineButton)
+        
         UINavigationBar.appearance().barTintColor = UIColor(red: 1/255, green: 174/255, blue: 240/255, alpha: 1)
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.title = recipeItem?.name
+        self.navigationItem.title = recipeItem?.name
+        self.navigationItem.setRightBarButton(refineButtonView, animated: true)
         self.recipeImageView.image = recipeImage
         self.recipeDescription.text = recipeItem?.description
         if (servingSize == 1){
@@ -76,11 +93,37 @@ class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource,
 
             })
         }
+        
+        addToCartButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func changeSuperMarket(superMarket: String){
+        supermarket = superMarket
+        print("New SuperMarket = \(supermarket)")
+        getRecipeIngredients(recipeName: recipeItem?.name ?? "")
+        calculateRecipePrice()
+    }
+    
+    @objc func showSelectionView(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "StoreSelectView") as! StoreSelectView
+        vc.view.backgroundColor = .clear
+        vc.delegate = self
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func calculateRecipePrice(){
+        recipePrice = 0
+        for item in ingredients{
+            recipePrice += Double(item.price) ?? 0
+        }
+        addToCartButton.setTitle("Add To Cart - £\(String(format: "%.2f", recipePrice))", for: .normal)
     }
     
     //# Firestore Query
-    func getRecipeIngredients(recipeName: String){
-        let query = db.collection("recipes").document(recipeName).collection("ingredients").document("sainsburys").collection(getBudgetString())
+    public func getRecipeIngredients(recipeName: String){
+        ingredients.removeAll()
+        let query = db.collection("recipes").document(recipeName).collection("ingredients").document(supermarket).collection(getBudgetString())
         dataSource = ingredientsCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IngredientsCell", for: indexPath) as! IngredientsCell
             print("Ingredients: \(documentSnapshot.data()!)")
@@ -90,20 +133,8 @@ class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource,
             cell.ingredientWeight.text = "Weight: \(self.ingredients[indexPath.row].weight!)"
             cell.ingredientQuantity.text = "Qnt: \(self.ingredients[indexPath.row].quantity!)"
             let imageURL = self.ingredients[indexPath.row].ingredientIcon
-            
-            if let url = URL(string: imageURL ?? "")
-            {
-                DispatchQueue.global().async {
-                    if let data = try? Data( contentsOf:url)
-                    {
-                        DispatchQueue.main.async {
-                            let ingredientImage = UIImage(data: data)
-                            cell.ingredientImage.image = ingredientImage
-                        }
-                    }
-                }
-            }
-
+            UIHelper.downloadImageForCell(imageURL: imageURL!, cellImageView: cell.ingredientImage)
+            self.calculateRecipePrice()
             return cell
         })
     }
@@ -125,6 +156,13 @@ class RecipeDetailsViewController: UIViewController, UICollectionViewDataSource,
             return ""
         }
         return budgetString
+    }
+    
+    @IBAction func addToShoppingList(_ sender: Any) {
+        recipeItem?.price = recipePrice
+        recipeItem?.store = supermarket
+        ShoppingCart.recipes.append(recipeItem!)
+        print(ShoppingCart.recipes)
     }
     
     //# IngredientsCollectionView Delegates/DataSource
