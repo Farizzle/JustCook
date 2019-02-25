@@ -21,6 +21,7 @@
 		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
 		EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */; };
 		EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */; };
+		EF10A80D2222F1CC00459790 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = EF10A80C2222F1CC00459790 /* shop.png */; };
 		EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */; };
 		EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB8F21FE101F004679B0 /* alarmclock.png */; };
 		EF15CB9221FE10D0004679B0 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB9121FE10D0004679B0 /* fire.png */; };
@@ -32,6 +33,12 @@
 		EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1AC9D221F4EC460025CE9E /* twostar.png */; };
 		EF5F695121EFA0FC00D7464F /* UserPrefs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5F694F21EFA0FC00D7464F /* UserPrefs.xcdatamodeld */; };
 		EF5F695321EFA1AF00D7464F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F695221EFA1AF00D7464F /* CoreDataHelper.swift */; };
+		EF7CD12D222304A8007B65F0 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CD12C222304A8007B65F0 /* ShoppingCart.swift */; };
+		EF7CD133222314C3007B65F0 /* shopping-basket.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD132222314C3007B65F0 /* shopping-basket.png */; };
+		EF7CD13522231D94007B65F0 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CD13422231D94007B65F0 /* ShoppingCartViewController.swift */; };
+		EF7CD13722231EF1007B65F0 /* ShoppingCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CD13622231EF1007B65F0 /* ShoppingCartCell.swift */; };
+		EF7CD13922234E60007B65F0 /* fire-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD13822234E60007B65F0 /* fire-blue.png */; };
+		EF7CD13B22234FB4007B65F0 /* fridge-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD13A22234FB4007B65F0 /* fridge-blue.png */; };
 		EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */; };
 		EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42621E5442C007922C6 /* UIHelper.swift */; };
 		EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6B42921E545B4007922C6 /* Colours.swift */; };
@@ -67,6 +74,7 @@
 		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
+		EF10A80C2222F1CC00459790 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
 		EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		EF15CB8F21FE101F004679B0 /* alarmclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarmclock.png; sourceTree = "<group>"; };
 		EF15CB9121FE10D0004679B0 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
@@ -78,6 +86,12 @@
 		EF1AC9D221F4EC460025CE9E /* twostar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twostar.png; sourceTree = "<group>"; };
 		EF5F695021EFA0FC00D7464F /* UserPrefs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserPrefs.xcdatamodel; sourceTree = "<group>"; };
 		EF5F695221EFA1AF00D7464F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		EF7CD12C222304A8007B65F0 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		EF7CD132222314C3007B65F0 /* shopping-basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-basket.png"; sourceTree = "<group>"; };
+		EF7CD13422231D94007B65F0 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		EF7CD13622231EF1007B65F0 /* ShoppingCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCell.swift; sourceTree = "<group>"; };
+		EF7CD13822234E60007B65F0 /* fire-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire-blue.png"; sourceTree = "<group>"; };
+		EF7CD13A22234FB4007B65F0 /* fridge-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fridge-blue.png"; sourceTree = "<group>"; };
 		EFA6B42321E53ACD007922C6 /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		EFA6B42621E5442C007922C6 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EFA6B42921E545B4007922C6 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -164,6 +178,7 @@
 				EFB0B83121F38C4300277629 /* RecipesViewController.swift */,
 				EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */,
 				EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */,
+				EF7CD13422231D94007B65F0 /* ShoppingCartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,13 +209,17 @@
 				EF1AC9D121F4EC450025CE9E /* fourstar.png */,
 				EF1AC9CF21F4EC420025CE9E /* onestar.png */,
 				EFE1CE2C221BEEE4007FE8C6 /* aldi.png */,
+				EF10A80C2222F1CC00459790 /* shop.png */,
+				EF7CD13822234E60007B65F0 /* fire-blue.png */,
 				EF1AC9D021F4EC430025CE9E /* threestar.png */,
 				EF1AC9D221F4EC460025CE9E /* twostar.png */,
+				EF7CD132222314C3007B65F0 /* shopping-basket.png */,
 				EFE1CE2A221BEE51007FE8C6 /* asda.png */,
 				EF15CB9121FE10D0004679B0 /* fire.png */,
 				EFE1CE2E221BEF10007FE8C6 /* waitrose.png */,
 				EF15CB9321FE1196004679B0 /* fridgewhite.png */,
 				EFE1CE26221BEDC5007FE8C6 /* tesco.png */,
+				EF7CD13A22234FB4007B65F0 /* fridge-blue.png */,
 				EFE1CE28221BEE0E007FE8C6 /* sainsburys.png */,
 				6407C74621DE936900845D59 /* grocery (2).png */,
 				EF15CB8F21FE101F004679B0 /* alarmclock.png */,
@@ -225,6 +244,7 @@
 				6460935421DEA09400A2F17B /* Slide.xib */,
 				EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */,
 				EFB8787222109F0C00CC1F13 /* IngredientsCell.swift */,
+				EF7CD13622231EF1007B65F0 /* ShoppingCartCell.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -263,6 +283,7 @@
 			children = (
 				EFB0B83421F38D9B00277629 /* Recipes.swift */,
 				EFB8787022109B1400CC1F13 /* Ingredients.swift */,
+				EF7CD12C222304A8007B65F0 /* ShoppingCart.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -341,12 +362,14 @@
 				6407C74721DE936900845D59 /* grocery (2).png in Resources */,
 				649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */,
 				649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */,
+				EF7CD13922234E60007B65F0 /* fire-blue.png in Resources */,
 				6407C74D21DE94A200845D59 /* AdmiralCAT.ttf in Resources */,
 				649DABDE21DE81E0004A9485 /* Assets.xcassets in Resources */,
 				EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */,
 				EFE1CE29221BEE0E007FE8C6 /* sainsburys.png in Resources */,
 				EFE1CE27221BEDC5007FE8C6 /* tesco.png in Resources */,
 				EF1AC9D721F4EC460025CE9E /* twostar.png in Resources */,
+				EF10A80D2222F1CC00459790 /* shop.png in Resources */,
 				EF1AC9D521F4EC460025CE9E /* threestar.png in Resources */,
 				EF15CB9421FE1196004679B0 /* fridgewhite.png in Resources */,
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
@@ -356,6 +379,8 @@
 				EFE1CE2B221BEE51007FE8C6 /* asda.png in Resources */,
 				EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */,
 				6407C74B21DE94A200845D59 /* OFL-FAQ.txt in Resources */,
+				EF7CD13B22234FB4007B65F0 /* fridge-blue.png in Resources */,
+				EF7CD133222314C3007B65F0 /* shopping-basket.png in Resources */,
 				6460935521DEA09400A2F17B /* Slide.xib in Resources */,
 				EFE1CE2F221BEF10007FE8C6 /* waitrose.png in Resources */,
 			);
@@ -485,6 +510,7 @@
 			files = (
 				EFB8787122109B1400CC1F13 /* Ingredients.swift in Sources */,
 				EF5F695321EFA1AF00D7464F /* CoreDataHelper.swift in Sources */,
+				EF7CD13522231D94007B65F0 /* ShoppingCartViewController.swift in Sources */,
 				6460935321DEA07D00A2F17B /* Slide.swift in Sources */,
 				EF5F695121EFA0FC00D7464F /* UserPrefs.xcdatamodeld in Sources */,
 				EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */,
@@ -492,10 +518,12 @@
 				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
 				EFB8787322109F0C00CC1F13 /* IngredientsCell.swift in Sources */,
 				EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */,
+				EF7CD13722231EF1007B65F0 /* ShoppingCartCell.swift in Sources */,
 				EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */,
 				EFEC13C121E690080048D11C /* CustomButton.swift in Sources */,
 				EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */,
 				EFB0B83221F38C4300277629 /* RecipesViewController.swift in Sources */,
+				EF7CD12D222304A8007B65F0 /* ShoppingCart.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 				EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */,
 				EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */,
@@ -656,7 +684,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -676,7 +704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ezeapplications.justCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
