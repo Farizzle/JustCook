@@ -25,6 +25,8 @@ struct Recipes {
     var calories: String!
     var cookTime: String!
     var fridgeDate: String!
+    var price: Double?
+    var store: String?
     
     init(name: String, cuisineType: String, recipeIcon: String, dietryReqs: dietry, rating: Int?, description: String, calories: String, cookTime: String, fridgeDate: String) {
         self.name = name
