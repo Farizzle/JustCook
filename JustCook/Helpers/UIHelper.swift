@@ -17,6 +17,20 @@ struct UIHelper {
             label.text = "\(text)"
         }
     }
+    
+    static public func downloadImageForCell(imageURL: String, cellImageView: UIImageView){
+        if let url = URL(string: imageURL)
+        {
+            DispatchQueue.global().async {
+                if let data = try? Data( contentsOf:url)
+                {
+                    DispatchQueue.main.async {
+                        cellImageView.image = UIImage(data: data)!
+                    }
+                }
+            }
+        }
+    }
 }
 
 
