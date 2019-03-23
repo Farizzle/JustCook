@@ -53,6 +53,7 @@
 		EFE1CE2F221BEF10007FE8C6 /* waitrose.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1CE2E221BEF10007FE8C6 /* waitrose.png */; };
 		EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */; };
 		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
+		EFF9826C2246BA4E006B1DD3 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		EFE1CE2E221BEF10007FE8C6 /* waitrose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waitrose.png; sourceTree = "<group>"; };
 		EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSelectView.swift; sourceTree = "<group>"; };
 		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		649DABD521DE81DE004A9485 /* JustCook */ = {
 			isa = PBXGroup;
 			children = (
+				EFF9826A2246BA3B006B1DD3 /* ViewModels */,
 				EFB0B83321F38D8400277629 /* DataModels */,
 				EFDEB8AF21E7D8B400ADFE9B /* CoreDataModels */,
 				EFA6B42821E545A9007922C6 /* Constants */,
@@ -294,6 +297,14 @@
 				EF5F694F21EFA0FC00D7464F /* UserPrefs.xcdatamodeld */,
 			);
 			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		EFF9826A2246BA3B006B1DD3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +531,7 @@
 				EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */,
 				EF7CD13722231EF1007B65F0 /* ShoppingCartCell.swift in Sources */,
 				EFB0B83521F38D9B00277629 /* Recipes.swift in Sources */,
+				EFF9826C2246BA4E006B1DD3 /* RecipesViewModel.swift in Sources */,
 				EFEC13C121E690080048D11C /* CustomButton.swift in Sources */,
 				EFA6B42721E5442C007922C6 /* UIHelper.swift in Sources */,
 				EFB0B83221F38C4300277629 /* RecipesViewController.swift in Sources */,

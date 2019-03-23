@@ -394,13 +394,13 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLj-al-Trt">
                                                     <rect key="frame" x="0.0" y="190" width="414" height="60"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-NV-z89">
-                                                            <rect key="frame" x="8" y="8" width="109" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yummy Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-NV-z89">
+                                                            <rect key="frame" x="8" y="8" width="121" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-9T-pKQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From the world" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-9T-pKQ">
                                                             <rect key="frame" x="8" y="37" width="398" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="eQi-57-02W"/>
@@ -409,7 +409,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onestar.png" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-zI-vKD">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fivestar.png" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-zI-vKD">
                                                             <rect key="frame" x="362" y="8" width="44" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="6HC-aW-ROe"/>
@@ -1006,9 +1006,9 @@
         <image name="asda.png" width="320" height="95"/>
         <image name="fire-blue.png" width="120" height="120"/>
         <image name="fire.png" width="256" height="256"/>
+        <image name="fivestar.png" width="240" height="240"/>
         <image name="fridge-blue.png" width="128" height="128"/>
         <image name="fridgewhite.png" width="256" height="256"/>
-        <image name="onestar.png" width="240" height="240"/>
         <image name="sainsburys.png" width="320" height="61"/>
         <image name="tesco.png" width="640" height="170"/>
         <image name="waitrose.png" width="640" height="133"/>
