@@ -11,19 +11,16 @@ import Firebase
 import FirebaseUI
 
 class RecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-  
-    let db = Firestore.firestore()
     
     @IBOutlet weak var recipesCollectionView: UICollectionView!
-    var recipes = [Recipes]()
-    var recipeIcons = [UIImage]()
     var dataSource : FUIFirestoreCollectionViewDataSource!
+    let recipesViewModel = RecipesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationItem.title = "Recipes"
         
-        self.navigationController?.title = "Recipes"
-        
+        // Create and setup the shopping cart button & action
         let shoppingCart = UIButton(type: .custom)
         shoppingCart.setImage(UIImage(named: "shopping-basket"), for: .normal)
         shoppingCart.frame = CGRect(x: self.view.frame.width, y: 0, width: 25, height: 25)
@@ -31,58 +28,14 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         shoppingCart.imageView?.contentMode = .scaleAspectFit
         shoppingCart.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 0)
         let shoppingCartView = UIBarButtonItem(customView: shoppingCart)
-
         self.navigationItem.setRightBarButton(shoppingCartView, animated: true)
-        let query = db.collection("recipes")
-        dataSource = recipesCollectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
-            print("DATA: \(documentSnapshot.data()!)")
-            self.recipes.append(Recipes(dictionary: documentSnapshot.data())!)
-            cell.recipeTitle.text = self.recipes[indexPath.row].name
-            cell.recipeCuisine.text = self.recipes[indexPath.row].cuisineType
-            switch self.recipes[indexPath.row].rating {
-            case 1:
-                cell.recipeRating.image = UIImage.init(named: "onestar.png")
-                break
-            case 2:
-                cell.recipeRating.image = UIImage.init(named: "twostar.png")
-                break
-            case 3:
-                cell.recipeRating.image = UIImage.init(named: "threestar.png")
-                break
-            case 4:
-                cell.recipeRating.image = UIImage.init(named: "fourstar.png")
-                break
-            case 5:
-                cell.recipeRating.image = UIImage.init(named: "fivestar.png")
-                break
-            default:
-                print("Failed to get recipe ratings")
-            }
-         
-            let imageURL = self.recipes[indexPath.row].recipeIcon
-            
-            if let url = URL(string: imageURL ?? "")
-            {
-                DispatchQueue.global().async {
-                    if let data = try? Data( contentsOf:url)
-                    {
-                        DispatchQueue.main.async {
-                            let recipeImage = UIImage(data: data)
-                            cell.recipeImage.image = recipeImage
-                        }
-                    }
-                }
-            }
-            
-            return cell
-        })
         
+        // Assign datasource and delegate for collectionView and force reload
+        dataSource = recipesViewModel.assignDataSource(collectionView: recipesCollectionView)
         recipesCollectionView.dataSource = dataSource
         recipesCollectionView.delegate = self
         recipesCollectionView.reloadData()
 
-        self.navigationController?.navigationItem.title = "Recipes"
     }
     
     @objc func goToShoppingCart(){
@@ -91,25 +44,24 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recipes.count
+        return recipesViewModel.recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
-        
         let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
         present(recipeDetails, animated: true, completion: nil)
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! RecipesCell
         let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
-        recipeDetails.recipeItem = recipes[indexPath.row]
-        recipeDetails.recipeImage = cell.recipeImage.image!
+        // Allow the image to load for the recipe cell prior to attempting to pass it through to the next VC
+        guard let cellImage = cell.recipeImage.image else {return}
+        recipeDetails.recipeItem = recipesViewModel.recipes[indexPath.row]
+        recipeDetails.recipeImage = cellImage
         self.navigationController?.pushViewController(recipeDetails, animated: true)
     }
-
 
 }
