@@ -70,7 +70,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         addToCartButton.setTitle(calculatedPrice, for: .normal)
     }
     
-    // StoreDelegate - Requeries the database with new supermarket
+    // StoreDelegate - Re-queries the database with new supermarket
     func changeSuperMarket(superMarket: String) {
         guard let recipeName = recipeItem?.name else{return}
         recipeDetailsViewModel.supermarket = superMarket
@@ -78,6 +78,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         ingredientsCollectionView.reloadData()
     }
     
+    // Adds this recipeItem to the shoppingCart
     @IBAction func addToShoppingList(_ sender: Any) {
         recipeItem?.price = recipeDetailsViewModel.recipePrice
         recipeItem?.store = recipeDetailsViewModel.supermarket
@@ -85,6 +86,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         print(ShoppingCart.recipes)
     }
     
+    // Launches view to change super market
     @objc func showSelectionView(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "StoreSelectView") as! StoreSelectView
         vc.view.backgroundColor = .clear
