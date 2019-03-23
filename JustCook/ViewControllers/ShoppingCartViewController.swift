@@ -29,6 +29,7 @@ class ShoppingCartViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
         cell.recipeName.text = ShoppingCart.recipes[indexPath.row].name
+        UIHelper.downloadImageForCell(imageURL: ShoppingCart.recipes[indexPath.row].recipeIcon, cellImageView: cell.recipeImage)
         UIView.animate(withDuration: 0.75, animations: {
             cell.caloriesImage.alpha = 1.0
             cell.recipeCalories.alpha = 1.0
@@ -46,7 +47,6 @@ class ShoppingCartViewController: UIViewController, UICollectionViewDelegate, UI
         UIView.animate(withDuration: 1.0, animations: {
             cell.recipeImage.frame = finalFrame
         })
-        UIHelper.downloadImageForCell(imageURL: ShoppingCart.recipes[indexPath.row].recipeIcon, cellImageView: cell.recipeImage)
         switch ShoppingCart.recipes[indexPath.row].store {
         case "asda":
             cell.recipeSuperMarket.image = UIImage(named: "asda")
