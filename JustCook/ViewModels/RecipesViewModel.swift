@@ -10,10 +10,15 @@ import Foundation
 import Firebase
 import FirebaseUI
 
-class RecipesViewModel {
+class RecipesViewModel: NSObject, UICollectionViewDelegate {
     
     var dataSource : FUIFirestoreCollectionViewDataSource!
     var recipes = [Recipes]()
+    var viewController : UIViewController!
+    
+    init(recipesVC: RecipesViewController) {
+        viewController = recipesVC
+    }
     
     func assignDataSource(collectionView: UICollectionView) -> FUIFirestoreCollectionViewDataSource {
         let query = AppDelegate.database.collection("recipes")
@@ -63,4 +68,26 @@ class RecipesViewModel {
         
         return dataSource
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return recipes.count
+    }
+    
+    private func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
+        let recipeDetails = viewController.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
+        viewController.present(recipeDetails, animated: true, completion: nil)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! RecipesCell
+        let recipeDetails = viewController.storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
+        // Allow the image to load for the recipe cell prior to attempting to pass it through to the next VC
+        guard let cellImage = cell.recipeImage.image else {return}
+        recipeDetails.recipeItem = recipes[indexPath.row]
+        recipeDetails.recipeImage = cellImage
+        viewController.navigationController?.pushViewController(recipeDetails, animated: true)
+    }
+
 }

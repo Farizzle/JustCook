@@ -10,14 +10,16 @@ import UIKit
 import Firebase
 import FirebaseUI
 
-class RecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class RecipesViewController: UIViewController {
     
     @IBOutlet weak var recipesCollectionView: UICollectionView!
     var dataSource : FUIFirestoreCollectionViewDataSource!
-    let recipesViewModel = RecipesViewModel()
+    var recipesViewModel: RecipesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Assign navTitle
         self.navigationController?.navigationItem.title = "Recipes"
         
         // Create and setup the shopping cart button & action
@@ -30,10 +32,13 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let shoppingCartView = UIBarButtonItem(customView: shoppingCart)
         self.navigationItem.setRightBarButton(shoppingCartView, animated: true)
         
+        // Setup viewModel with this viewController
+        recipesViewModel = RecipesViewModel.init(recipesVC: self)
+        
         // Assign datasource and delegate for collectionView and force reload
         dataSource = recipesViewModel.assignDataSource(collectionView: recipesCollectionView)
         recipesCollectionView.dataSource = dataSource
-        recipesCollectionView.delegate = self
+        recipesCollectionView.delegate = recipesViewModel
         recipesCollectionView.reloadData()
 
     }
@@ -43,25 +48,4 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.navigationController?.pushViewController(shoppingCartVC, animated: true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recipesViewModel.recipes.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
-        let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
-        present(recipeDetails, animated: true, completion: nil)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! RecipesCell
-        let recipeDetails = storyboard?.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as! RecipeDetailsViewController
-        // Allow the image to load for the recipe cell prior to attempting to pass it through to the next VC
-        guard let cellImage = cell.recipeImage.image else {return}
-        recipeDetails.recipeItem = recipesViewModel.recipes[indexPath.row]
-        recipeDetails.recipeImage = cellImage
-        self.navigationController?.pushViewController(recipeDetails, animated: true)
-    }
-
 }
