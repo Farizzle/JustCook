@@ -39,6 +39,7 @@ class RecipesViewController: UIViewController {
         dataSource = recipesViewModel.assignDataSource(collectionView: recipesCollectionView)
         recipesCollectionView.dataSource = dataSource
         recipesCollectionView.delegate = recipesViewModel
+        recipesCollectionView.isPagingEnabled = false
         recipesCollectionView.reloadData()
 
     }
