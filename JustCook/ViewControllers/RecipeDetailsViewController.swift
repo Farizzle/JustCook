@@ -75,7 +75,6 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         guard let recipeName = recipeItem?.name else{return}
         recipeDetailsViewModel.supermarket = superMarket
         ingredientsCollectionView.dataSource = recipeDetailsViewModel.assignDataSource(collectionView: ingredientsCollectionView, withRecipe: recipeName)
-        ingredientsCollectionView.reloadData()
     }
     
     // Adds this recipeItem to the shoppingCart
@@ -95,6 +94,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         self.present(vc, animated: true, completion: nil)
     }
    
+    // Handles fading animation & UILabel's content
     func setupHoldingUI(){
         self.cookTimeLabel.alpha = 0.0
         self.cookTimeImage.alpha = 0.0
@@ -110,8 +110,8 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         } else {
             servingSizeLabel.text = "When serving for \(recipeDetailsViewModel.servingSize) people"
         }
-        let calories = Int((recipeItem?.cookTime)!)!
-        self.cookTimeLabel.text = "\(calories * recipeDetailsViewModel.servingSize) Mins"
+        let cookTime = Int((recipeItem?.cookTime)!)!
+        self.cookTimeLabel.text = "\(cookTime * recipeDetailsViewModel.servingSize) Mins"
         self.caloriesLabel.text = "\(Int((recipeItem?.calories)!)!) kcal/pp"
         self.fridgeDateLabel.text = recipeItem?.fridgeDate
         
