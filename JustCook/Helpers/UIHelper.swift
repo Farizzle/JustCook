@@ -10,7 +10,7 @@ import UIKit
 
 struct UIHelper {
     static public func animateLabel(label: UILabel, text: Int){
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             label.alpha = 0.0
         }) { (bool) in
             label.alpha = 1.0
