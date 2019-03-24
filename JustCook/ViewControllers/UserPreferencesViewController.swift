@@ -45,7 +45,7 @@ class UserPreferencesViewController: UIViewController {
     }
 
     // ServingSize Section
-    var servingSizeNumber: Int = 0
+    var servingSizeNumber: Int = 1
     @IBOutlet weak var servingSize : UILabel!
     @IBAction func increaseServing(_ sender: Any) {
         if (servingSizeNumber < 4){
@@ -54,7 +54,7 @@ class UserPreferencesViewController: UIViewController {
         }
     }
     @IBAction func decreaseServing(_ sender: Any) {
-        if (servingSizeNumber > 0){
+        if (servingSizeNumber > 1){
             servingSizeNumber -= 1
             UIHelper.animateLabel(label: servingSize, text: servingSizeNumber)
         }
