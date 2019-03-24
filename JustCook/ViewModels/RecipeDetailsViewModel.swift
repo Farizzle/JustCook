@@ -43,7 +43,6 @@ class RecipeDetailsViewModel: NSObject, UICollectionViewDelegate {
         let query = AppDelegate.database.collection("recipes").document(withRecipe).collection("ingredients").document(supermarket).collection(getBudgetString())
         dataSource = collectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IngredientsCell", for: indexPath) as! IngredientsCell
-            print("Ingredients: \(documentSnapshot.data()!)")
             self.ingredients.append(Ingredients(dictionary: documentSnapshot.data())!)
             cell.ingredientName.text = self.ingredients[indexPath.row].name
             cell.ingredientPrice.text = "Price: £\(self.ingredients[indexPath.row].price!)"
@@ -87,7 +86,6 @@ class RecipeDetailsViewModel: NSObject, UICollectionViewDelegate {
     }
     
     func changeSuperMarket(superMarket: String){
-        print("New SuperMarket = \(supermarket)")
         if let delegate = self.delegate {
             delegate.totalPriceCalculated(calculatedPrice: self.calculateRecipePrice())
         }

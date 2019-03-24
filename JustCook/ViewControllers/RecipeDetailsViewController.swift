@@ -82,7 +82,6 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         recipeItem?.price = recipeDetailsViewModel.recipePrice
         recipeItem?.store = recipeDetailsViewModel.supermarket
         ShoppingCart.recipes.append(recipeItem!)
-        print(ShoppingCart.recipes)
     }
     
     // Launches view to change super market

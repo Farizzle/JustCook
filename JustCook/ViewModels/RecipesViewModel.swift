@@ -24,7 +24,6 @@ class RecipesViewModel: NSObject, UICollectionViewDelegate {
         let query = AppDelegate.database.collection("recipes")
         dataSource = collectionView.bind(toFirestoreQuery: query, populateCell: { (collectionView, indexPath, documentSnapshot) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCell
-            print("DATA: \(documentSnapshot.data()!)")
             self.recipes.append(Recipes(dictionary: documentSnapshot.data())!)
             cell.recipeTitle.text = self.recipes[indexPath.row].name
             cell.recipeCuisine.text = self.recipes[indexPath.row].cuisineType

@@ -33,9 +33,6 @@ class SplashViewController: UIViewController, UIScrollViewDelegate {
         view.bringSubviewToFront(pageControl)
         
         userDetails = CoreDataHelper.loadCoreData(entityName: "User");
-        print(userDetails[0].value(forKey: "servingSize") as Any)
-        print(userDetails[0].value(forKey: "budget") as Any)
-        print(userDetails[0].value(forKey: "selectedDates") as? String)
     }
     
     func createSlides() -> [Slide] {
