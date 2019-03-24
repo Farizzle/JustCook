@@ -68,6 +68,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
     // Once VM has loaded data, passes the price value to VC
     func totalPriceCalculated(calculatedPrice: String){
         addToCartButton.setTitle(calculatedPrice, for: .normal)
+        ingredientsCollectionView.reloadData()
     }
     
     // StoreDelegate - Re-queries the database with new supermarket
@@ -89,6 +90,7 @@ class RecipeDetailsViewController: UIViewController, StoreDelegate, RecipePrices
         let vc = storyboard?.instantiateViewController(withIdentifier: "StoreSelectView") as! StoreSelectView
         vc.view.backgroundColor = .clear
         vc.delegate = self
+        vc.passedStore = recipeDetailsViewModel.supermarket
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }

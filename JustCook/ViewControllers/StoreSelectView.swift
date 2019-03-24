@@ -25,6 +25,7 @@ class StoreSelectView: UIViewController {
     let userDetails:[NSManagedObject] = CoreDataHelper.loadCoreData(entityName: "User")
     var servingSize = Int()
     var delegate: StoreDelegate?
+    var passedStore = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +76,10 @@ class StoreSelectView: UIViewController {
     
     // Delegate to update the supermaket parameter in the query for ingredients
     func updateSuperMarket(superMarket: String){
-        if let delegate = self.delegate {
-            delegate.changeSuperMarket(superMarket: superMarket)
+        if (passedStore != superMarket){
+            if let delegate = self.delegate {
+                delegate.changeSuperMarket(superMarket: superMarket)
+            }
         }
         dismiss(animated: true, completion: nil)
     }
