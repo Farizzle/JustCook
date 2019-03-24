@@ -10,7 +10,7 @@ import UIKit
 
 class ShoppingCartViewController: UIViewController, ShoppingCartPrice {
     
-    @IBOutlet weak var continuePurchaseButton = UIButton()
+    @IBOutlet var continuePurchaseButton: UIButton!
     @IBOutlet weak var shoppingCartCollectionView: UICollectionView!
     var shoppingCartViewModel: ShoppingCartViewModel!
     
@@ -29,11 +29,12 @@ class ShoppingCartViewController: UIViewController, ShoppingCartPrice {
         shoppingCartCollectionView.delegate = shoppingCartViewModel
         
         // Configure purchase button
-        continuePurchaseButton?.layer.borderColor = UIColor.white.cgColor
+        continuePurchaseButton.layer.borderColor = UIColor.white.cgColor
     }
     
+    // Update button with total price of items in cart
     func calculateCartPrice(priceString: String) {
-        continuePurchaseButton?.setTitle(priceString, for: .normal)
+        continuePurchaseButton.setTitle(priceString, for: .normal)
     }
     
  
