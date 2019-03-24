@@ -26,6 +26,8 @@ class ShoppingCartViewModel: NSObject, UICollectionViewDelegate, UICollectionVie
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCell
         cell.recipeName.text = ShoppingCart.recipes[indexPath.row].name
+        let finalFrame = cell.recipeImage.frame
+        cell.recipeImage.frame = CGRect(x: cell.recipeImage.frame.origin.x-150, y: cell.recipeImage.frame.origin.y, width: cell.recipeImage.frame.size.width, height: cell.recipeImage.frame.size.height)
         UIHelper.downloadImageForCell(imageURL: ShoppingCart.recipes[indexPath.row].recipeIcon, cellImageView: cell.recipeImage)
         UIView.animate(withDuration: 0.75, animations: {
             cell.caloriesImage.alpha = 1.0
@@ -39,11 +41,6 @@ class ShoppingCartViewModel: NSObject, UICollectionViewDelegate, UICollectionVie
         cell.recipePrice.text = "£\(String(format: "%.2f", ShoppingCart.recipes[indexPath.row].price ?? 0))"
         cell.recipeCalories.text = "\(Int(ShoppingCart.recipes[indexPath.row].calories) ?? 0)" + " kcal/pp"
         cell.expDate.text = ShoppingCart.recipes[indexPath.row].fridgeDate
-        let finalFrame = cell.recipeImage.frame
-        cell.recipeImage.frame = CGRect(x: cell.recipeImage.frame.origin.x-150, y: cell.recipeImage.frame.origin.y, width: cell.recipeImage.frame.size.width, height: cell.recipeImage.frame.size.height)
-        UIView.animate(withDuration: 1.0, animations: {
-            cell.recipeImage.frame = finalFrame
-        })
         switch ShoppingCart.recipes[indexPath.row].store {
         case "asda":
             cell.recipeSuperMarket.image = UIImage(named: "asda")
@@ -65,6 +62,9 @@ class ShoppingCartViewModel: NSObject, UICollectionViewDelegate, UICollectionVie
         }
         cell.recipeImage.layer.cornerRadius = 10
         cell.recipeImage.layer.masksToBounds = true
+        UIView.animate(withDuration: 1.5, animations: {
+            cell.recipeImage.frame = finalFrame
+        })
         return cell
     }
     
