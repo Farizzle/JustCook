@@ -28,11 +28,21 @@
                                     <constraint firstAttribute="width" secondItem="jtI-8o-8e8" secondAttribute="height" multiplier="1:1" id="51c-4D-53r"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofont.png" translatesAutoresizingMaskIntoConstraints="NO" id="WWd-tS-4aK">
+                                <rect key="frame" x="102" y="404" width="170" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="4dp-mn-kjB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.68235294120000001" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WWd-tS-4aK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EHP-Ct-fQH"/>
+                            <constraint firstAttribute="trailing" secondItem="WWd-tS-4aK" secondAttribute="trailing" constant="103" id="G6W-Rv-A7U"/>
+                            <constraint firstItem="WWd-tS-4aK" firstAttribute="top" secondItem="jtI-8o-8e8" secondAttribute="bottom" constant="15.5" id="NYU-4Y-Gl2"/>
                             <constraint firstItem="jtI-8o-8e8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TKZ-R0-DAX"/>
                             <constraint firstItem="jtI-8o-8e8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VTs-fM-Nhc"/>
+                            <constraint firstItem="WWd-tS-4aK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="102" id="gDq-al-SWz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,5 +53,6 @@
     </scenes>
     <resources>
         <image name="grocery (2).png" width="480" height="480"/>
+        <image name="logofont.png" width="297" height="62"/>
     </resources>
 </document>
