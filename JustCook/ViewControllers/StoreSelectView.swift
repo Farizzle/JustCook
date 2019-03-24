@@ -22,13 +22,12 @@ class StoreSelectView: UIViewController {
     @IBOutlet weak var aldiButton: UIButton!
     @IBOutlet weak var waitroseButton: UIButton!
     
-    var userDetails:[NSManagedObject] = []
+    let userDetails:[NSManagedObject] = CoreDataHelper.loadCoreData(entityName: "User")
     var servingSize = Int()
     var delegate: StoreDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userDetails = CoreDataHelper.loadCoreData(entityName: "User");
         servingSize = (userDetails[userDetails.count-1].value(forKey: "servingSize") as! Int)
         self.currentServingSize.text = "\(servingSize)"
         hostingView.layer.cornerRadius = 20
@@ -51,26 +50,22 @@ class StoreSelectView: UIViewController {
         }
     }
     
+    // Triggers delegate to update the query field for the supermarket
     @IBAction func selectSuperMarket(_ sender: UIButton){
         switch sender.tag {
         case 0:
-            print("Tesco Selected")
             updateSuperMarket(superMarket: "tesco")
             break
         case 1:
-            print("Sainsburys Selected")
             updateSuperMarket(superMarket: "sainsburys")
             break
         case 2:
-            print("Asda Selected")
             updateSuperMarket(superMarket: "asda")
             break
         case 3:
-            print("Aldi Selected")
             updateSuperMarket(superMarket: "aldi")
             break
         case 4:
-            print("Waitrose Selected")
             updateSuperMarket(superMarket: "waitrose")
             break
         default:
@@ -78,6 +73,7 @@ class StoreSelectView: UIViewController {
         }
     }
     
+    // Delegate to update the supermaket parameter in the query for ingredients
     func updateSuperMarket(superMarket: String){
         if let delegate = self.delegate {
             delegate.changeSuperMarket(superMarket: superMarket)
