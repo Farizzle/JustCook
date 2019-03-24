@@ -28,6 +28,7 @@ struct CoreDataHelper {
         
         do {
             try managedContext.save()
+            print("Saved user information successfully")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -45,6 +46,7 @@ struct CoreDataHelper {
         
         do {
             userDetails = try managedContext.fetch(fetchRequest)
+            print("Loaded user information successfully")
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
