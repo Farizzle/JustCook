@@ -13,6 +13,7 @@ class ShoppingCartViewController: UIViewController, ShoppingCartPrice {
     @IBOutlet var continuePurchaseButton: UIButton!
     @IBOutlet weak var shoppingCartCollectionView: UICollectionView!
     var shoppingCartViewModel: ShoppingCartViewModel!
+    @IBOutlet weak var emptyFridge: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,26 @@ class ShoppingCartViewController: UIViewController, ShoppingCartPrice {
         
         // Configure purchase button
         continuePurchaseButton.layer.borderColor = UIColor.white.cgColor
+    
+    }
+    
+    // Handle purchaseButton action
+    @IBAction func purchaseButton(){
+        if (ShoppingCart.recipes.count != 0){
+            
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     // Update button with total price of items in cart
     func calculateCartPrice(priceString: String) {
-        continuePurchaseButton.setTitle(priceString, for: .normal)
+        if (ShoppingCart.recipes.count != 0){
+            emptyFridge.alpha = 0
+            continuePurchaseButton.setTitle(priceString, for: .normal)
+        } else {
+            continuePurchaseButton.setTitle("Stock up!", for: .normal)
+        }
     }
     
  

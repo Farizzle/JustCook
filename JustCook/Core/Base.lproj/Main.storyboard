@@ -950,6 +950,9 @@
                                     <outlet property="delegate" destination="O3e-pr-0v5" id="pkW-Lw-NOU"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFridge.png" translatesAutoresizingMaskIntoConstraints="NO" id="4kX-tl-mjb">
+                                <rect key="frame" x="37.666666666666664" y="100" width="339" height="500"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5D-AH-jTg">
                                 <rect key="frame" x="0.0" y="714" width="414" height="93"/>
                                 <subviews>
@@ -969,6 +972,7 @@
                                         <connections>
                                             <action selector="addToShoppingList:" destination="5f9-0b-gi7" eventType="touchUpInside" id="Hvn-ae-Whh"/>
                                             <action selector="continueButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfx-5k-Wjn"/>
+                                            <action selector="purchaseButton" destination="O3e-pr-0v5" eventType="touchUpInside" id="xic-lh-iqe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -981,17 +985,22 @@
                             <constraint firstItem="M5D-AH-jTg" firstAttribute="leading" secondItem="COU-gQ-mCN" secondAttribute="leading" id="EoK-nY-oQa"/>
                             <constraint firstItem="M5D-AH-jTg" firstAttribute="centerX" secondItem="COU-gQ-mCN" secondAttribute="centerX" id="LxW-Z6-im5"/>
                             <constraint firstItem="PDG-IJ-0dE" firstAttribute="top" secondItem="COU-gQ-mCN" secondAttribute="top" id="Mge-6c-cJc"/>
+                            <constraint firstItem="COU-gQ-mCN" firstAttribute="trailing" secondItem="4kX-tl-mjb" secondAttribute="trailing" constant="37.333333333333314" id="ced-cr-GAA"/>
                             <constraint firstItem="COU-gQ-mCN" firstAttribute="trailing" secondItem="M5D-AH-jTg" secondAttribute="trailing" id="cxs-8d-m9e"/>
                             <constraint firstItem="PDG-IJ-0dE" firstAttribute="trailing" secondItem="M5D-AH-jTg" secondAttribute="trailing" id="eGH-hd-Nze"/>
                             <constraint firstItem="M5D-AH-jTg" firstAttribute="bottom" secondItem="COU-gQ-mCN" secondAttribute="bottom" constant="33" id="erZ-GG-NzA"/>
                             <constraint firstItem="M5D-AH-jTg" firstAttribute="top" secondItem="COU-gQ-mCN" secondAttribute="top" constant="714" id="fYK-xu-Lsz"/>
+                            <constraint firstItem="M5D-AH-jTg" firstAttribute="top" secondItem="4kX-tl-mjb" secondAttribute="bottom" constant="114" id="k23-W0-czm"/>
+                            <constraint firstItem="4kX-tl-mjb" firstAttribute="leading" secondItem="COU-gQ-mCN" secondAttribute="leading" constant="37.666666666666664" id="oRo-1G-LBV"/>
                             <constraint firstItem="PDG-IJ-0dE" firstAttribute="leading" secondItem="M5D-AH-jTg" secondAttribute="leading" id="sgT-kh-Y4Q"/>
+                            <constraint firstItem="4kX-tl-mjb" firstAttribute="top" secondItem="COU-gQ-mCN" secondAttribute="top" constant="100" id="wsn-f7-oo1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="COU-gQ-mCN"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="continuePurchaseButton" destination="7tQ-Hb-Enk" id="7hO-Iv-2XO"/>
+                        <outlet property="emptyFridge" destination="4kX-tl-mjb" id="0fG-Jt-G9e"/>
                         <outlet property="shoppingCartCollectionView" destination="PDG-IJ-0dE" id="o9N-ab-r1A"/>
                     </connections>
                 </viewController>
@@ -1004,6 +1013,7 @@
         <image name="alarmclock.png" width="240" height="240"/>
         <image name="aldi.png" width="320" height="106"/>
         <image name="asda.png" width="320" height="95"/>
+        <image name="emptyFridge.png" width="500" height="800"/>
         <image name="fire-blue.png" width="120" height="120"/>
         <image name="fire.png" width="256" height="256"/>
         <image name="fivestar.png" width="240" height="240"/>
