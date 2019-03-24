@@ -93,10 +93,6 @@ class RecipeDetailsViewModel: NSObject, UICollectionViewDelegate {
         }
     }
     
-    func reloadData(){
-        
-    }
-    
     // IngredientsCollectionView Delegates/DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ingredients.count
