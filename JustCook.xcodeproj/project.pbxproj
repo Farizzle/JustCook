@@ -21,6 +21,9 @@
 		649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649DABE821DE8534004A9485 /* GoogleService-Info.plist */; };
 		EDFFE5753FD5172EB0DA030F /* Pods_JustCook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */; };
 		EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */; };
+		EF1072AA2247CDBF001A6815 /* logofont.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1072A92247CDBF001A6815 /* logofont.png */; };
+		EF1072AE2247D574001A6815 /* emptyFridge.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1072AD2247D574001A6815 /* emptyFridge.png */; };
+		EF1072B22247DB2E001A6815 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1072B12247DB2D001A6815 /* placeholder.png */; };
 		EF10A80D2222F1CC00459790 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = EF10A80C2222F1CC00459790 /* shop.png */; };
 		EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */; };
 		EF15CB9021FE1020004679B0 /* alarmclock.png in Resources */ = {isa = PBXBuildFile; fileRef = EF15CB8F21FE101F004679B0 /* alarmclock.png */; };
@@ -54,6 +57,8 @@
 		EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */; };
 		EFEC13C121E690080048D11C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC13C021E690080048D11C /* CustomButton.swift */; };
 		EFF9826C2246BA4E006B1DD3 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */; };
+		EFF9826E2246C2DB006B1DD3 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9826D2246C2DB006B1DD3 /* RecipeDetailsViewModel.swift */; };
+		EFF982702247BE28006B1DD3 /* ShoppingCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9826F2247BE28006B1DD3 /* ShoppingCartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,9 @@
 		649DABE821DE8534004A9485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AEEAB046316FFD6F898CCD /* Pods_JustCook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustCook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0FD03D21F39A6E007CEA81 /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
+		EF1072A92247CDBF001A6815 /* logofont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofont.png; sourceTree = "<group>"; };
+		EF1072AD2247D574001A6815 /* emptyFridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyFridge.png; sourceTree = "<group>"; };
+		EF1072B12247DB2D001A6815 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		EF10A80C2222F1CC00459790 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
 		EF15CB8D21FDF20E004679B0 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		EF15CB8F21FE101F004679B0 /* alarmclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarmclock.png; sourceTree = "<group>"; };
@@ -108,6 +116,8 @@
 		EFE1CE30221BEFBA007FE8C6 /* StoreSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSelectView.swift; sourceTree = "<group>"; };
 		EFEC13C021E690080048D11C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		EFF9826D2246C2DB006B1DD3 /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
+		EFF9826F2247BE28006B1DD3 /* ShoppingCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,9 +219,12 @@
 			children = (
 				649DABDD21DE81E0004A9485 /* Assets.xcassets */,
 				EF1AC9CE21F4EC400025CE9E /* fivestar.png */,
+				EF1072A92247CDBF001A6815 /* logofont.png */,
 				EF1AC9D121F4EC450025CE9E /* fourstar.png */,
 				EF1AC9CF21F4EC420025CE9E /* onestar.png */,
 				EFE1CE2C221BEEE4007FE8C6 /* aldi.png */,
+				EF1072AD2247D574001A6815 /* emptyFridge.png */,
+				EF1072B12247DB2D001A6815 /* placeholder.png */,
 				EF10A80C2222F1CC00459790 /* shop.png */,
 				EF7CD13822234E60007B65F0 /* fire-blue.png */,
 				EF1AC9D021F4EC430025CE9E /* threestar.png */,
@@ -303,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				EFF9826B2246BA4E006B1DD3 /* RecipesViewModel.swift */,
+				EFF9826D2246C2DB006B1DD3 /* RecipeDetailsViewModel.swift */,
+				EFF9826F2247BE28006B1DD3 /* ShoppingCartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -369,7 +384,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6407C74C21DE94A200845D59 /* OFL.txt in Resources */,
+				EF1072B22247DB2E001A6815 /* placeholder.png in Resources */,
 				EF15CB9221FE10D0004679B0 /* fire.png in Resources */,
+				EF1072AE2247D574001A6815 /* emptyFridge.png in Resources */,
 				6407C74721DE936900845D59 /* grocery (2).png in Resources */,
 				649DABE121DE81E0004A9485 /* LaunchScreen.storyboard in Resources */,
 				649DABE921DE8534004A9485 /* GoogleService-Info.plist in Resources */,
@@ -386,6 +403,7 @@
 				649DABDC21DE81DE004A9485 /* Main.storyboard in Resources */,
 				EFE1CE2D221BEEE4007FE8C6 /* aldi.png in Resources */,
 				EF1AC9D321F4EC460025CE9E /* fivestar.png in Resources */,
+				EF1072AA2247CDBF001A6815 /* logofont.png in Resources */,
 				EF1AC9D621F4EC460025CE9E /* fourstar.png in Resources */,
 				EFE1CE2B221BEE51007FE8C6 /* asda.png in Resources */,
 				EF1AC9D421F4EC460025CE9E /* onestar.png in Resources */,
@@ -527,6 +545,7 @@
 				EFA6B42A21E545B4007922C6 /* Colours.swift in Sources */,
 				649DABD921DE81DE004A9485 /* SplashViewController.swift in Sources */,
 				EFA6B42421E53ACD007922C6 /* UserPreferencesViewController.swift in Sources */,
+				EFF982702247BE28006B1DD3 /* ShoppingCartViewModel.swift in Sources */,
 				EFB8787322109F0C00CC1F13 /* IngredientsCell.swift in Sources */,
 				EFE1CE31221BEFBA007FE8C6 /* StoreSelectView.swift in Sources */,
 				EF7CD13722231EF1007B65F0 /* ShoppingCartCell.swift in Sources */,
@@ -538,6 +557,7 @@
 				EF7CD12D222304A8007B65F0 /* ShoppingCart.swift in Sources */,
 				649DABD721DE81DE004A9485 /* AppDelegate.swift in Sources */,
 				EF0FD03E21F39A6E007CEA81 /* RecipesCell.swift in Sources */,
+				EFF9826E2246C2DB006B1DD3 /* RecipeDetailsViewModel.swift in Sources */,
 				EF15CB8E21FDF20E004679B0 /* RecipeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
